@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASIA FASTNERS PVT LTD — Precision That Holds Everything Together</title>
+<meta name="description" content="Industrial fasteners for dependable connections: hex bolts, flange bolts, hex nuts, SEM screws, washers and screws.">
+<style>
+:root{--bg:#FFFFFF;--bg2:#FFFFFF;--tx:#0F172A;--mu:#525B6A;--bl:#1E40AF;--or:#EA580C;--ln:rgba(15,23,42,.1);--sh:0 10px 25px -5px rgba(0,0,0,.05),0 8px 10px -6px rgba(0,0,0,.02)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:64px 64px;padding-bottom:64px;overflow-x:clip}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--mu)}
+h1,h2,h3{font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.05;letter-spacing:-.02em;word-break:break-word}
+h1{font-size:clamp(30px,6.5vw,76px);max-width:14ch}
+h2{font-size:clamp(26px,4.2vw,52px);max-width:18ch;margin:8px 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+main,header,footer{position:relative}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s}
+nav.s{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln);box-shadow:0 2px 10px rgba(0,0,0,.04)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:64px}
+.brand{font-weight:700;letter-spacing:.16em;text-decoration:none;font-size:14px;color:var(--tx);white-space:nowrap}
+.brand b{color:var(--or)}
+nav ul{display:flex;gap:20px;list-style:none;margin-left:auto;padding:0}
+nav ul a{text-decoration:none;font-size:13px;letter-spacing:.1em;color:var(--mu);background:linear-gradient(var(--or),var(--or)) 0 100%/0 2px no-repeat;transition:.3s;padding-bottom:3px}
+nav ul a:hover{color:var(--tx);background-size:100% 2px}
+.btn{display:inline-block;border:1px solid var(--tx);background:var(--bg2);color:var(--tx);padding:12px 22px;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:.25s;box-shadow:0 1px 2px rgba(0,0,0,.05);white-space:nowrap}
+.btn:hover{transform:translateY(-2px);border-color:var(--or);color:var(--or)}
+.btn.p{background:var(--or);border-color:var(--or);color:#FFFFFF}
+.btn.p:hover{background:#C2410C;border-color:#C2410C;color:#FFFFFF}
+.btn.b{background:var(--bl);border-color:var(--bl);color:#FFFFFF}
+.btn.b:hover{background:#172554;border-color:#172554;color:#FFFFFF}
+#menu{display:none;margin-left:auto;background:var(--bg2);border:1px solid var(--ln);color:var(--tx);padding:8px 12px;font:600 12px ui-monospace,Menlo,monospace;cursor:pointer}
+section{padding:100px 0}
+.dark{background:rgba(241,245,249,.85);backdrop-filter:blur(8px)}
+.alt{background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
+#hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;padding:120px 0 90px}
+#hero .wrap{width:100%;display:flex;justify-content:flex-end}
+#hero .t{max-width:540px;margin-left:auto;opacity:0;transition:opacity 1s}
+#hero.show .t{opacity:1}
+#hero .mono{color:var(--mu)}
+#hero h1{color:var(--tx)}
+#hero p.l{max-width:46ch;margin:18px 0 28px;font-size:18px;color:var(--mu)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+#skip{position:fixed;right:22px;bottom:84px;z-index:25}
+#story{height:560vh;padding:0;position:relative}
+.stick{position:sticky;top:0;height:100vh;height:100dvh;display:flex;align-items:center;z-index:10;pointer-events:none}
+.stick .wrap{position:relative;width:100%;height:65vh;display:flex;align-items:center;pointer-events:none}
+.ch{position:absolute;top:50%;max-width:440px;pointer-events:none;opacity:0;visibility:hidden;z-index:12;transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1),visibility .55s}
+.ch.on{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+.ch.ch-left{left:24px;right:auto;text-align:left;transform:translate(-24px,-50%)}
+.ch.ch-left.on{transform:translate(0,-50%)!important}
+.ch.ch-right{right:24px;left:auto;text-align:left;transform:translate(24px,-50%)}
+.ch.ch-right.on{transform:translate(0,-50%)!important}
+.ch .mono{color:var(--mu);font-weight:600;display:inline-block;margin-bottom:6px}
+.ch h2{color:var(--tx);font-size:clamp(24px,3.5vw,42px);line-height:1.1;margin:6px 0 14px}
+.ch p{color:var(--mu);font-size:16px;line-height:1.6}
+.bar{position:absolute;left:50%;transform:translateX(-50%);bottom:30px;width:160px;height:3px;background:var(--ln);border-radius:2px;overflow:hidden;z-index:15}
+.bar i{display:block;height:100%;background:var(--or);width:0;transition:width .1s}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+input,select,textarea{background:var(--bg2);border:1px solid var(--ln);color:var(--tx);padding:12px;font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;width:100%;border-radius:2px;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--or);outline:none;box-shadow:0 0 0 3px rgba(234,88,12,.12)}
+label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);box-shadow:var(--sh)}
+.card{background:var(--bg2);padding:26px;display:flex;flex-direction:column;gap:10px;min-height:240px;transition:.3s}
+.card:hover{background:#F8FAFC}
+.card.hl{box-shadow:inset 0 0 0 2px var(--or)}
+.card h3{font-size:26px}
+.card p{color:var(--mu);font-size:14px;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{border:1px solid var(--ln);background:var(--bg2);color:var(--tx);padding:9px 14px;cursor:pointer;font-size:14px;transition:.2s}
+.chip:hover{border-color:var(--or)}
+.chip.on{background:var(--bl);border-color:var(--bl);color:#FFFFFF}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.lab{min-height:100vh;min-height:100dvh;display:flex;align-items:center;touch-action:pan-y}
+.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:24px;box-shadow:var(--sh)}
+.pr div{background:var(--bg2);padding:22px}
+.pr h3{font-size:20px;margin-bottom:6px}
+.pr p{color:var(--mu);font-size:14px}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg2);z-index:40;transform:translateX(105%);transition:.4s;padding:22px;overflow:auto;border-left:1px solid var(--ln);box-shadow:-5px 0 25px rgba(0,0,0,.1);visibility:hidden;pointer-events:none}
+#drawer.open{transform:none;visibility:visible;pointer-events:auto}
+.it{border-top:1px solid var(--ln);padding:14px 0;display:grid;gap:8px}
+.it .r{display:grid;grid-template-columns:90px 1fr 1fr;gap:8px}
+#bk{position:fixed;right:18px;bottom:78px;z-index:30;display:none;box-shadow:0 4px 12px rgba(234,88,12,.3)}
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--ln);box-shadow:0 -2px 10px rgba(0,0,0,.05);padding-bottom:env(safe-area-inset-bottom,0)}
+.mob a,.mob button{flex:1;padding:16px 6px;text-align:center;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.12em;text-decoration:none;text-transform:uppercase;color:var(--tx);background:none;border:0;cursor:pointer}
+.mob .q{background:var(--or);color:#FFFFFF}
+#st{margin-top:14px;padding:12px;border:1px solid var(--ln);background:var(--bg2);display:none}
+footer{background:var(--bg);border-top:1px solid var(--ln);padding:50px 0 100px}
+footer ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;padding:0;margin:18px 0}
+footer a{color:var(--mu);text-decoration:none;font-size:14px}
+footer a:hover{color:var(--tx)}
+.no3d #c{display:none}
+
+/* ===== Contact Section Redesign (Scoped) ===== */
+#contact{padding:100px 0 110px}
+.contact-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;margin-bottom:56px}
+.contact-hero-text .mono{display:inline-block;margin-bottom:10px;color:var(--or);font-weight:600}
+.contact-title{font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.02em;margin:0 0 16px;color:var(--tx)}
+.contact-lead{font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:var(--mu);max-width:44ch}
+.contact-visual{display:flex;justify-content:center;align-items:center}
+.contact-fastener-art{width:100%;max-width:340px;height:auto;filter:drop-shadow(0 12px 28px rgba(15,23,42,.06))}
+
+/* Contact Information Cards */
+.contact-info-wrap{margin-bottom:48px}
+.contact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--ln);border:1px solid var(--ln);box-shadow:var(--sh);border-radius:2px;overflow:hidden}
+.contact-item{background:var(--bg2);padding:24px 20px;display:flex;flex-direction:column;gap:14px;transition:background .25s}
+.contact-item:hover{background:#F8FAFC}
+.contact-item-top{display:flex;align-items:center;gap:10px}
+.contact-icon{width:36px;height:36px;border-radius:4px;background:rgba(234,88,12,.08);color:var(--or);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,color .2s}
+.contact-item:hover .contact-icon{background:var(--or);color:#FFFFFF}
+.contact-label{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);font-weight:600}
+.contact-value{font-size:14px;line-height:1.5;color:var(--tx);font-weight:500;word-break:break-word}
+.contact-link{color:var(--tx);text-decoration:none;transition:color .2s}
+.contact-link:hover{color:var(--or);text-decoration:underline}
+.contact-val.placeholder{color:var(--mu);font-weight:400;font-size:13px}
+
+/* Minimalist Enquiry CTA */
+.contact-cta{background:var(--bg2);border:1px solid var(--ln);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;gap:32px;box-shadow:var(--sh);border-radius:2px}
+.contact-cta-left .mono{display:inline-block;margin-bottom:6px;font-size:11px;letter-spacing:.14em}
+.contact-cta-left h3{font-size:clamp(22px,2.5vw,30px);color:var(--tx);letter-spacing:-.02em;margin-bottom:6px}
+.contact-cta-left p{color:var(--mu);font-size:15px;max-width:52ch;line-height:1.55}
+.contact-cta-right{flex-shrink:0}
+
+@media(max-width:1100px) and (min-width:821px){
+ .ch{max-width:380px}
+ .ch.ch-left{left:16px}
+ .ch.ch-right{right:16px}
+}
+
+@media(max-width:820px){
+ nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:20px 22px;border-bottom:1px solid var(--ln);box-shadow:0 8px 16px rgba(0,0,0,.08);gap:14px}
+ nav ul.o{display:flex}
+ #menu{display:block}
+ nav .btn{display:none}
+ .wrap{padding:0 16px}
+ section{padding:60px 0}
+ .two{grid-template-columns:1fr;gap:24px}
+ .grid{grid-template-columns:1fr}
+ .card{padding:20px 18px;min-height:auto}
+ .card .row{flex-direction:column;gap:8px}
+ .card .row .btn{width:100%;text-align:center}
+ .chips{gap:6px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+ .chip{white-space:nowrap;font-size:13px;padding:8px 12px}
+ .pr{grid-template-columns:1fr}
+ .it .r{grid-template-columns:1fr}
+ #skip{display:none}
+ #bk{bottom:74px;right:14px}
+
+ /* Mobile Hero */
+ #hero{min-height:100vh;min-height:100dvh;padding:80px 0 90px;align-items:flex-end}
+ #hero .wrap{justify-content:flex-start}
+ #hero .t{margin-left:0;max-width:100%;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:18px 16px;border-radius:12px;border:1px solid var(--ln);box-shadow:0 4px 16px rgba(0,0,0,.05)}
+ #hero h1{font-size:clamp(24px,6.8vw,36px);max-width:100%;word-break:break-word}
+ #hero p.l{font-size:14px;margin:8px 0 14px}
+ #hero .row{flex-direction:column;gap:8px;width:100%}
+ #hero .row .btn{width:100%;text-align:center;padding:12px 14px}
+
+ /* Mobile Story Chapters */
+ #story{height:460vh}
+ .stick .wrap{height:100%;padding:0 16px}
+ .ch{position:absolute;top:auto!important;bottom:80px!important;left:16px!important;right:16px!important;max-width:calc(100% - 32px)!important;transform:translateY(20px)!important;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:16px 18px;border-radius:10px;border:1px solid var(--ln);box-shadow:0 6px 20px rgba(0,0,0,.06);text-align:left!important;opacity:0;visibility:hidden}
+ .ch.on{transform:translateY(0)!important;opacity:1!important;visibility:visible!important}
+ .ch h2{font-size:clamp(19px,5vw,26px);margin:4px 0 8px;line-height:1.15}
+ .ch p{font-size:13px;line-height:1.5}
+ .bar{bottom:66px;width:120px}
+
+ /* Lab tools on mobile */
+ .tools .btn{flex:1 1 120px;text-align:center;padding:10px 8px;font-size:11px}
+
+ /* Mobile Contact Redesign */
+ .contact-hero{grid-template-columns:1fr;gap:28px;margin-bottom:36px}
+ .contact-visual{order:-1;justify-content:flex-start}
+ .contact-fastener-art{max-width:280px}
+ .contact-grid{grid-template-columns:1fr}
+ .contact-item{padding:18px 16px;flex-direction:row;align-items:center;justify-content:space-between;gap:14px}
+ .contact-item-top{flex-direction:row}
+ .contact-value{text-align:right}
+ .contact-cta{flex-direction:column;align-items:flex-start;padding:26px 20px;gap:20px}
+ .contact-cta-right{width:100%}
+ .contact-cta-right .btn{width:100%;text-align:center}
+}
+@media(max-width:540px){
+ .contact-item{flex-direction:column;align-items:flex-start;gap:10px}
+ .contact-value{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}#hero .t{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+
+<nav id="nav" aria-label="Main">
+<div class="wrap">
+<a class="brand" href="#hero">ASIA <b>FASTNERS</b></a>
+<button id="menu" aria-expanded="false" aria-controls="nl">MENU</button>
+<ul id="nl">
+<li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Industries</a></li><li><a href="#quality">Quality</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<a class="btn p" href="#quote">Request a Quote</a>
+</div>
+</nav>
+
+<main>
+<section id="hero" aria-label="Introduction">
+<div class="wrap">
+<div class="t">
+<p class="mono">ASIA FASTNERS PVT LTD</p>
+<h1>PRECISION THAT HOLDS EVERYTHING TOGETHER.</h1>
+<p class="l">Industrial fasteners for dependable connections across demanding applications.</p>
+<div class="row"><a class="btn p" href="#products">Explore Products</a><a class="btn" href="#quote">Request a Quote</a></div>
+</div>
+</div>
+</section>
+<button class="btn" id="skip" type="button">Skip intro</button>
+
+<section id="story" aria-label="Engineering story">
+<div class="stick"><div class="wrap">
+<div class="ch ch-left" data-i="0"><p class="mono">Chapter 01 — Asia Fastners</p><h2>PRECISION IN EVERY JOINT.</h2><p>Head, flange, shank, and thread: engineered with micron-level tolerances for mission-critical assemblies.</p></div>
+<div class="ch ch-right" data-i="1"><p class="mono">Chapter 02 — Product Spectrum</p><h2>EVERY COMPONENT HAS A PURPOSE.</h2><p>High-tensile hex bolts, flange fasteners, SEM screws, and load-distributing washers — all manufactured under one roof.</p></div>
+<div class="ch ch-left" data-i="2"><p class="mono">Chapter 03 — Engineering Standards</p><h2>PRECISION CHANGES EVERYTHING.</h2><p>Rigorous quality controls and tight tolerances ensure seamless mating and superior clamping load.</p></div>
+<div class="ch ch-right" data-i="3"><p class="mono">Chapter 04 — Built for Demands</p><h2>STRENGTH BEGINS WITH PRECISION.</h2><p>Engineered to resist high vibration, shear forces, and fatigue across automotive, heavy machinery, and construction.</p></div>
+<div class="ch ch-left" data-i="4"><p class="mono">Chapter 05 — The Asia Fastners Promise</p><h2>ONE RELIABLE CONNECTION. ENDLESS POSSIBILITIES.</h2><p>Supplying world-class fastening solutions that hold heavy industries, machines, and infrastructure together.</p></div>
+<div class="bar" aria-hidden="true"><i id="pg"></i></div>
+</div></div>
+</section>
+
+<section id="lab" class="lab" aria-label="Assembly Lab">
+<div class="wrap" style="width:100%">
+<p class="mono">Interactive</p>
+<h2>ASSEMBLY LAB.</h2>
+<p style="color:var(--mu);max-width:42ch">Drag anywhere in this section to rotate the bolt, washer and nut. Separate them along their axis, then bring them together. Illustrative geometry, not an engineering simulation.</p>
+<div class="tools">
+<button class="btn b" id="lx" type="button">Exploded view</button>
+<button class="btn" id="la" type="button">Assemble</button>
+<button class="btn" id="lr" type="button" aria-pressed="true">Auto-rotate: on</button>
+<button class="btn" id="lz" type="button">Reset</button>
+</div>
+</div>
+</section>
+
+<section id="about" class="dark">
+<div class="wrap two">
+<div><p class="mono">Company</p><h2>BUILT AROUND RELIABLE CONNECTIONS.</h2></div>
+<p style="color:var(--mu);font-size:18px;margin-top:30px">ASIA FASTNERS PVT LTD supplies industrial fastening products for professional procurement and industrial applications. Company history, facilities and credentials will be published here once verified information is supplied.</p>
+</div>
+</section>
+
+<section id="products" class="alt">
+<div class="wrap">
+<p class="mono">Catalogue</p>
+<h2>SIX FAMILIES OF CONNECTION.</h2>
+<div class="tools">
+<div style="flex:2;min-width:200px"><label for="q">Search</label><input id="q" type="search" placeholder="e.g. flange"></div>
+<div style="flex:1;min-width:150px"><label for="sort">Sort</label><select id="sort"><option value="a">Name A–Z</option><option value="z">Name Z–A</option></select></div>
+</div>
+<div class="chips" id="chips" role="group" aria-label="Category filter"></div>
+<div class="grid" id="grid" aria-live="polite"></div>
+<p class="mono" style="margin-top:14px">Sizes, grades, materials and finishes: shared on request. None are listed until confirmed.</p>
+</div>
+</section>
+
+<section id="industries" class="dark">
+<div class="wrap">
+<p class="mono">Potential applications</p>
+<h2>WHERE CONNECTIONS MATTER.</h2>
+<div class="chips" id="ind"></div>
+<p id="indtx" style="color:var(--mu);max-width:60ch;min-height:56px">Select an industry to highlight the related fastener families above.</p>
+</div>
+</section>
+
+<section id="quality" class="alt">
+<div class="wrap">
+<p class="mono">Principles</p>
+<h2>MANY COMPONENTS. ONE RELIABLE CONNECTION.</h2>
+<div class="pr">
+<div><h3>QUALITY</h3><p>A brand principle that guides how products are presented.</p></div>
+<div><h3>PRECISION</h3><p>Attention to fit between mating components.</p></div>
+<div><h3>RELIABILITY</h3><p>Dependable supply is the aim of every enquiry.</p></div>
+<div><h3>PRODUCT RANGE</h3><p>Bolts, nuts, screws and washers in one place.</p></div>
+<div><h3>CUSTOMER SERVICE</h3><p>Clear communication from request to reply.</p></div>
+<div><h3>RESPONSIVE ENQUIRIES</h3><p>Multi-product enquiries in a single request.</p></div>
+</div>
+<p class="mono" style="margin-top:14px">These are principles, not claims of certification or tested performance.</p>
+</div>
+</section>
+
+<section id="catalogue" class="dark">
+<div class="wrap two">
+<div><p class="mono">Catalogue</p><h2>ENGINEERED FOR EVERY CONNECTION.</h2></div>
+<div id="cat" style="margin-top:30px"></div>
+</div>
+</section>
+
+<section id="quote" class="alt">
+<div class="wrap two">
+<div>
+<p class="mono">Quotation</p>
+<h2>REQUEST A QUOTE.</h2>
+<p style="color:var(--mu)">Add products to your enquiry basket, or specify what you need in the form below. Your enquiry is sent directly to our team.</p>
+<div id="sum" style="margin-top:20px"></div>
+<button class="btn" type="button" id="open2">Edit enquiry basket</button>
+</div>
+<form id="f" action="https://formsubmit.co/akshtyagiindia@gmail.com" method="POST" target="hidden_iframe" novalidate>
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" id="f_sub" value="New Fastener Quotation Enquiry — Asia Fastners Pvt Ltd">
+<input type="hidden" name="Selected_Products" id="f_prods" value="">
+<div style="display:grid;gap:14px">
+<div><label for="n">Name *</label><input id="n" name="Name" required autocomplete="name"></div>
+<div><label for="co">Company</label><input id="co" name="Company" autocomplete="organization"></div>
+<div><label for="e">Email *</label><input id="e" name="Email" type="email" required autocomplete="email"></div>
+<div><label for="p">Phone / WhatsApp *</label><input id="p" name="Phone_WhatsApp" type="tel" required autocomplete="tel"></div>
+<div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" name="Message" rows="4"></textarea></div>
+<button class="btn p" id="f_btn" type="submit">Send enquiry</button>
+</div>
+<div id="st" role="alert"></div>
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Submission Handler"></iframe>
+</div>
+</section>
+
+<section id="contact" class="dark">
+<div class="wrap">
+  <!-- Minimalist Contact Hero Header -->
+  <div class="contact-hero">
+    <div class="contact-hero-text">
+      <p class="mono">Get In Touch</p>
+      <h2 class="contact-title">LET'S BUILD<br>STRONGER CONNECTIONS.</h2>
+      <p class="contact-lead">Have a question, product requirement, or partnership enquiry? Our team is here to help.</p>
+    </div>
+    <div class="contact-visual" aria-hidden="true">
+      <svg class="contact-fastener-art" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cfSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F1F5F9"/>
+            <stop offset="35%" stop-color="#CBD5E1"/>
+            <stop offset="70%" stop-color="#94A3B8"/>
+            <stop offset="100%" stop-color="#64748B"/>
+          </linearGradient>
+          <linearGradient id="cfHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+            <stop offset="100%" stop-color="#94A3B8" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="cfDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#475569"/>
+            <stop offset="100%" stop-color="#1E293B"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Technical Axis Lines -->
+        <line x1="25" y1="100" x2="315" y2="100" stroke="rgba(15,23,42,0.12)" stroke-width="1" stroke-dasharray="8 6"/>
+        <line x1="170" y1="20" x2="170" y2="180" stroke="rgba(15,23,42,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="170" cy="100" r="82" stroke="rgba(234,88,12,0.14)" stroke-width="1"/>
+
+        <!-- Component A: Precision M12 Hex Flange Bolt -->
+        <g transform="translate(60, 48)">
+          <path d="M42 0 L78 18 L78 44 L42 62 L6 44 L6 18 Z" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
+          <path d="M42 0 L42 62" stroke="#0F172A" stroke-width="0.9" opacity="0.6"/>
+          <path d="M42 0 L78 18 L42 34 L6 18 Z" fill="url(#cfHighlight)"/>
+          <ellipse cx="42" cy="64" rx="44" ry="14" fill="url(#cfDark)" stroke="#0F172A" stroke-width="1.3"/>
+          <ellipse cx="42" cy="62" rx="42" ry="12" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1"/>
+          <path d="M24 70 L24 130 A18 7 0 0 0 60 130 L60 70" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
+          <path d="M24 78 Q42 84 60 78 M24 87 Q42 93 60 87 M24 96 Q42 102 60 96 M24 105 Q42 111 60 105 M24 114 Q42 120 60 114 M24 122 Q42 128 60 122" stroke="#0F172A" stroke-width="1.1" fill="none"/>
+          <circle cx="42" cy="18" r="3" fill="#EA580C"/>
+        </g>
+
+        <!-- Component B: Mating Washer & Hex Nut -->
+        <g transform="translate(202, 68)">
+          <ellipse cx="46" cy="18" rx="35" ry="12" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
+          <ellipse cx="46" cy="18" rx="19" ry="6.5" fill="#F8FAFC" stroke="#0F172A" stroke-width="1.1"/>
+          <g transform="translate(0, 38)">
+            <path d="M46 0 L78 16 L78 40 L46 56 L14 40 L14 16 Z" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
+            <path d="M46 0 L78 16 L46 30 L14 16 Z" fill="url(#cfHighlight)"/>
+            <ellipse cx="46" cy="30" rx="17" ry="6" fill="url(#cfDark)" stroke="#0F172A" stroke-width="1.1"/>
+            <path d="M46 30 L46 56" stroke="#0F172A" stroke-width="0.9" opacity="0.6"/>
+          </g>
+        </g>
+
+        <!-- Annotations -->
+        <g transform="translate(18, 180)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#525B6A" letter-spacing="0.1em">
+          <text x="0" y="0">ISO 4017 / DIN 933</text>
+          <text x="0" y="12">PRECISION INDUSTRIAL FASTENERS</text>
+        </g>
+        <g transform="translate(240, 28)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#EA580C" letter-spacing="0.12em" font-weight="600">
+          <text x="0" y="0">● PRECISION FIT</text>
+          <text x="0" y="12" fill="#525B6A">GRADE 8.8 / 10.9</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Refined Contact Information Section -->
+  <div class="contact-info-wrap">
+    <div class="contact-grid" id="ci"></div>
+  </div>
+
+  <!-- Minimalist Enquiry CTA Section -->
+  <div class="contact-cta">
+    <div class="contact-cta-left">
+      <p class="mono" style="color:var(--or)">Direct Quotations</p>
+      <h3>SEND US A MESSAGE.</h3>
+      <p>Tell us what you need, and let's find the right fastening solution for your business.</p>
+    </div>
+    <div class="contact-cta-right">
+      <a class="btn p" href="#quote">Request a Quote</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<a class="brand" href="#hero">ASIA <b>FASTNERS</b> PVT LTD</a>
+<ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Industries</a></li><li><a href="#quality">Quality</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="#contact">Contact</a></li><li><a href="#quote">Request a Quote</a></li></ul>
+<p class="mono">© <span id="yr"></span> ASIA FASTNERS PVT LTD</p>
+</div>
+</footer>
+
+<button class="btn p" id="bk" type="button" aria-label="Open enquiry basket">Enquiry (<span id="cnt">0</span>)</button>
+
+<aside id="drawer" aria-label="Enquiry basket" aria-hidden="true">
+<div style="display:flex;justify-content:space-between;align-items:center"><h3>ENQUIRY BASKET</h3><button class="btn" id="cl" type="button">Close</button></div>
+<div id="items"></div>
+<p style="margin-top:16px"><a class="btn p" id="gq" href="#quote">Review &amp; request quote</a></p>
+</aside>
+
+<div class="mob" id="mob">
+<a class="q" href="#quote">Request a Quote</a>
+<a id="mc" href="#contact">Call</a>
+<a id="mw" href="#contact" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ===== CONFIG: fill these in. Nothing is invented. ===== */
+const CONFIG={
+  email:"akshtyagiindia@gmail.com", // enquiry destination
+  phone:"",        // e.g. "+91XXXXXXXXXX"
+  whatsapp:"",     // digits only with country code, e.g. "91XXXXXXXXXX"
+  address:"",
+  hours:"",
+  catalogueUrl:""  // link to a hosted catalogue PDF
+};
+const PRODUCTS=[
+ {id:"hex-bolts",name:"Hex Bolts",cat:"Bolts",desc:"Hexagon-head bolts for general structural and mechanical joints."},
+ {id:"flange-bolts",name:"Flange Bolts",cat:"Bolts",desc:"Bolts with an integrated flange that spreads clamping load without a separate washer."},
+ {id:"hex-nuts",name:"Hex Nuts",cat:"Nuts",desc:"Internally threaded hexagon nuts that pair with bolts and studs."},
+ {id:"sem-screws",name:"SEM Screws",cat:"Screws",desc:"Screws supplied with a pre-assembled washer for faster assembly."},
+ {id:"washers",name:"Washers",cat:"Washers",desc:"Flat washers that distribute load and protect mating surfaces."},
+ {id:"screws",name:"Screws",cat:"Screws",desc:"Machine and fastening screws for industrial assembly."}
+];
+const INDUSTRIES={
+ "Automotive":["Fastening in vehicle assemblies and components.",["flange-bolts","sem-screws","hex-bolts"]],
+ "Construction":["Structural joints and site fixing.",["hex-bolts","hex-nuts","washers"]],
+ "Manufacturing":["Production-line assembly and fixtures.",["sem-screws","screws","hex-nuts"]],
+ "Engineering":["General engineering assemblies.",["hex-bolts","hex-nuts","washers","screws"]],
+ "Infrastructure":["Frameworks, supports and utilities.",["hex-bolts","hex-nuts","washers"]],
+ "Fabrication":["Metal fabrication and workshop joining.",["hex-bolts","flange-bolts","washers"]],
+ "Machinery":["Machine frames, guards and drives.",["flange-bolts","hex-bolts","screws"]],
+ "Electrical":["Enclosures, panels and terminals.",["sem-screws","screws","washers"]],
+ "Industrial Maintenance":["Replacement and repair fastening.",["hex-bolts","hex-nuts","washers","screws"]]
+};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+$("#yr").textContent=new Date().getFullYear();
+
+/* ===== Nav ===== */
+addEventListener("scroll",()=>$("#nav").classList.toggle("s",scrollY>40),{passive:true});
+$("#menu").onclick=()=>{const o=$("#nl").classList.toggle("o");$("#menu").setAttribute("aria-expanded",o)};
+$("#nl").onclick=e=>{if(e.target.tagName==="A"){$("#nl").classList.remove("o")}};
+
+/* ===== Contact (config driven - minimalist redesigned) ===== */
+(function(){
+ const waLink=msg=>CONFIG.whatsapp?"https://wa.me/"+CONFIG.whatsapp.replace(/\D/g,"")+"?text="+encodeURIComponent(msg):"";
+ window.waLink=waLink;
+
+ const ICONS = {
+  ADDRESS: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  PHONE: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+  EMAIL: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+  WHATSAPP: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
+  "BUSINESS HOURS": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`
+ };
+
+ const card = (key, label, val, link) => {
+  const isPresent = Boolean(val && String(val).trim());
+  let content = "";
+  if (!isPresent) {
+   content = `<span class="contact-val placeholder">To be added by the company.</span>`;
+  } else if (link) {
+   content = `<a class="contact-link" href="${esc(link)}"${link.startsWith("http")?' target="_blank" rel="noopener"':""}>${esc(val)}</a>`;
+  } else {
+   content = `<span class="contact-val">${esc(val)}</span>`;
+  }
+  return `
+   <div class="contact-item">
+    <div class="contact-item-top">
+     <div class="contact-icon" aria-hidden="true">${ICONS[key] || ""}</div>
+     <span class="contact-label">${label}</span>
+    </div>
+    <div class="contact-value">${content}</div>
+   </div>`;
+ };
+
+ $("#ci").innerHTML = 
+  card("ADDRESS", "Address", CONFIG.address, "") +
+  card("PHONE", "Phone", CONFIG.phone, CONFIG.phone ? "tel:" + CONFIG.phone.replace(/[^\d+]/g, "") : "") +
+  card("EMAIL", "Email", CONFIG.email, CONFIG.email ? "mailto:" + CONFIG.email : "") +
+  card("WHATSAPP", "WhatsApp", CONFIG.whatsapp, CONFIG.whatsapp ? waLink("Hello Asia Fastners, I would like to get in touch.") : "") +
+  card("BUSINESS HOURS", "Business Hours", CONFIG.hours, "");
+
+ const mc=$("#mc"),mw=$("#mw");
+ if(CONFIG.phone)mc.href="tel:"+CONFIG.phone.replace(/[^\d+]/g,""); else mc.style.display="none";
+ if(CONFIG.whatsapp)mw.href=waLink("Hello Asia Fastners, I would like to enquire about your products."); else mw.style.display="none";
+ $("#cat").innerHTML=CONFIG.catalogueUrl
+  ?`<p style="color:var(--mu);margin-bottom:18px">View or download the current product catalogue.</p><a class="btn p" href="${esc(CONFIG.catalogueUrl)}" target="_blank" rel="noopener">Explore Catalogue</a>`
+  :`<p style="color:var(--mu);margin-bottom:18px">The catalogue PDF is not published yet. Tell us what you need and we will share product information.</p><a class="btn p" href="#quote">Request product information</a>`;
+})();
+
+/* ===== Products ===== */
+let cat="All";
+const cats=["All",...new Set(PRODUCTS.map(p=>p.cat))];
+$("#chips").innerHTML=cats.map(c=>`<button class="chip${c==="All"?" on":""}" data-c="${c}" type="button">${c}</button>`).join("");
+$("#chips").onclick=e=>{const c=e.target.dataset.c;if(!c)return;cat=c;document.querySelectorAll("#chips .chip").forEach(x=>x.classList.toggle("on",x.dataset.c===c));draw()};
+$("#q").oninput=draw;$("#sort").onchange=draw;
+let hl=[];
+function draw(){
+ const q=$("#q").value.trim().toLowerCase();
+ let l=PRODUCTS.filter(p=>(cat==="All"||p.cat===cat)&&(p.name+p.desc+p.cat).toLowerCase().includes(q));
+ l.sort((a,b)=>a.name.localeCompare(b.name)*($("#sort").value==="z"?-1:1));
+ $("#grid").innerHTML=l.length?l.map(p=>`<article class="card${hl.includes(p.id)?" hl":""}"><span class="mono">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="row"><button class="btn p" data-add="${p.id}" type="button">Add to Enquiry</button>${CONFIG.whatsapp?`<a class="btn" target="_blank" rel="noopener" href="${waLink("Hello Asia Fastners, I would like to enquire about "+p.name+".")}">WhatsApp</a>`:""}</div></article>`).join(""):`<div class="card"><h3>No match</h3><p>Nothing matches your search. Request a quote and tell us what you need.</p></div>`;
+}
+$("#grid").onclick=e=>{const id=e.target.dataset.add;if(id){add(id);e.target.textContent="Added ✓";setTimeout(()=>e.target.textContent="Add to Enquiry",1200)}};
+draw();
+
+/* ===== Industries ===== */
+$("#ind").innerHTML=Object.keys(INDUSTRIES).map(k=>`<button class="chip" data-k="${k}" type="button">${k}</button>`).join("");
+$("#ind").onclick=e=>{const k=e.target.dataset.k;if(!k)return;document.querySelectorAll("#ind .chip").forEach(x=>x.classList.toggle("on",x.dataset.k===k));hl=INDUSTRIES[k][1];$("#indtx").textContent=INDUSTRIES[k][0]+" Related fastener families are highlighted in the catalogue.";draw()};
+
+/* ===== Basket ===== */
+let basket=[];
+try{basket=JSON.parse(localStorage.getItem("af_basket")||"[]")}catch(e){}
+function save(){try{localStorage.setItem("af_basket",JSON.stringify(basket))}catch(e){}renderB()}
+function add(id){const p=PRODUCTS.find(x=>x.id===id);const i=basket.find(x=>x.id===id);if(i)i.qty++;else basket.push({id,name:p.name,qty:100,size:"",grade:""});save()}
+function renderB(){
+ $("#cnt").textContent=basket.length;
+ $("#bk").style.display=basket.length?"block":"none";
+ $("#items").innerHTML=basket.length?basket.map((b,i)=>`<div class="it"><div style="display:flex;justify-content:space-between"><strong>${esc(b.name)}</strong><button class="chip" data-rm="${i}" type="button" aria-label="Remove ${esc(b.name)}">Remove</button></div><div class="r"><div><label for="q${i}">Qty (pcs)</label><input id="q${i}" type="number" min="1" value="${b.qty}" data-i="${i}" data-k="qty"></div><div><label for="s${i}">Size</label><input id="s${i}" value="${esc(b.size)}" data-i="${i}" data-k="size"></div><div><label for="g${i}">Material / grade</label><input id="g${i}" value="${esc(b.grade)}" data-i="${i}" data-k="grade"></div></div></div>`).join(""):`<p style="color:var(--mu);margin-top:16px">Your basket is empty. Add products from the catalogue.</p>`;
+ $("#sum").innerHTML=basket.length?basket.map(b=>`<p class="mono" style="color:var(--tx)">${esc(b.name)} — ${b.qty} pcs${b.size?" — "+esc(b.size):""}${b.grade?" — "+esc(b.grade):""}</p>`).join(""):`<p class="mono">No products added yet</p>`;
+}
+$("#items").addEventListener("input",e=>{const t=e.target,i=t.dataset.i;if(i===undefined)return;basket[i][t.dataset.k]=t.dataset.k==="qty"?Math.max(1,parseInt(t.value)||1):t.value;try{localStorage.setItem("af_basket",JSON.stringify(basket))}catch(x){}$("#sum").innerHTML=basket.map(b=>`<p class="mono" style="color:var(--tx)">${esc(b.name)} — ${b.qty} pcs${b.size?" — "+esc(b.size):""}${b.grade?" — "+esc(b.grade):""}</p>`).join("")});
+$("#items").addEventListener("click",e=>{const r=e.target.dataset.rm;if(r!==undefined){basket.splice(+r,1);save()}});
+const dr=$("#drawer"),oD=o=>{dr.classList.toggle("open",o);dr.setAttribute("aria-hidden",!o)};
+$("#bk").onclick=()=>oD(true);$("#open2").onclick=()=>oD(true);$("#cl").onclick=()=>oD(false);$("#gq").onclick=()=>oD(false);
+addEventListener("keydown",e=>{if(e.key==="Escape")oD(false)});
+renderB();
+
+/* ===== Quote form (Direct submission: sends to akshtyagiindia@gmail.com without opening mail app) ===== */
+$("#f").onsubmit=async function(e){
+ e.preventDefault();
+ const st=$("#st"),btn=$("#f_btn");
+ const v=id=>$("#"+id).value.trim();
+ st.style.display="block";
+
+ if(!v("n")||!/^\S+@\S+\.\S+$/.test(v("e"))||v("p").replace(/\D/g,"").length<7){
+  st.textContent="Please enter your name, a valid email address and phone / WhatsApp number.";
+  st.style.borderColor="#EF4444";
+  st.style.color="#DC2626";
+  return;
+ }
+
+ const prodsText = basket.length
+  ? basket.map(b=>`- ${b.name} (${b.qty} pcs${b.size?" | size: "+b.size:""}${b.grade?" | grade: "+b.grade:""})`).join("\n")
+  : (v("m")?"Custom specification (see message below)":"General enquiry (no specific basket items selected)");
+
+ btn.disabled=true;
+ btn.textContent="Sending enquiry...";
+ st.style.borderColor="var(--bl)";
+ st.style.color="var(--bl)";
+ st.textContent="Submitting your enquiry directly to Asia Fastners...";
+
+ if(location.protocol==="file:"){
+  st.style.borderColor="#F59E0B";
+  st.style.color="#B45309";
+  st.innerHTML="<strong>Local File Notice:</strong><br>Email dispatch services block submissions from local <code>file:///</code> paths for spam prevention.<br><br>👉 Run this in your VS Code terminal:<br><code>node server.js</code><br>Then open: <strong><a href='http://localhost:3000/asia-fastners.html' target='_blank' style='text-decoration:underline;color:inherit'>http://localhost:3000/asia-fastners.html</a></strong><br><small><em>(Once pushed to GitHub Pages or any hosting, it works 100% automatically without any local server).</em></small>";
+  btn.disabled=false;
+  btn.textContent="Send enquiry";
+  return;
+ }
+
+ try {
+  const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(CONFIG.email)}`, {
+   method: "POST",
+   headers: { "Content-Type": "application/json", "Accept": "application/json" },
+   body: JSON.stringify({
+    "Customer Name": v("n"),
+    "Company": v("co")||"Not specified",
+    "Customer Email": v("e"),
+    "Phone / WhatsApp": v("p"),
+    "Selected Products": prodsText,
+    "Message": v("m")||"None",
+    "_subject": `New Fastener Quotation Enquiry from ${v("n")} — Asia Fastners`,
+    "_template": "table"
+   })
+  });
+  const data = await res.json();
+  if(data.success==="true" || data.success===true){
+   st.style.borderColor="#10B981";
+   st.style.color="#047857";
+   st.innerHTML="<strong>✓ Enquiry Sent Successfully!</strong><br>Thank you, your quotation request has been delivered directly to <strong>"+esc(CONFIG.email)+"</strong>. Our team will review your specifications and contact you shortly.";
+   $("#f").reset();
+   basket=[];
+   save();
+  } else if(data.message && data.message.includes("Activation")){
+   st.style.borderColor="#F59E0B";
+   st.style.color="#B45309";
+   st.innerHTML="<strong>⚠️ One-Time Activation Required:</strong><br>FormSubmit has sent an activation email to <strong>"+esc(CONFIG.email)+"</strong>.<br>Please open your Gmail (check <strong>Inbox</strong> or <strong>Spam / Junk</strong> folder) and click the <strong>'Activate Form'</strong> button once. After that one click, every enquiry will land straight in your inbox!";
+  } else {
+   throw new Error(data.message||"Submission failed");
+  }
+ } catch(err) {
+  st.style.borderColor="#EF4444";
+  st.style.color="#DC2626";
+  st.innerHTML="<strong>Submission Error:</strong> "+esc(err.message||"Network error. Please try again.");
+ } finally {
+  btn.disabled=false;
+  btn.textContent="Send enquiry";
+ }
+};
+
+/* ===== 3D ===== */
+(function(){
+ const cv=$("#c");let R;
+ try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){}
+ if(!R||typeof THREE==="undefined"){document.body.classList.add("no3d");$("#hero").classList.add("show");return}
+ const mobile=innerWidth<820;
+ R.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));
+ const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.1,100);
+ sc.add(new THREE.HemisphereLight(0xcfd8e6,0x15191f,.9));
+ const key=new THREE.DirectionalLight(0xffffff,1.6);key.position.set(5,6,6);sc.add(key);
+ const rim=new THREE.DirectionalLight(0x2457A7,2.2);rim.position.set(-6,2,-5);sc.add(rim);
+ const spot=new THREE.PointLight(0xF47735,.8,20);spot.position.set(-3,-2,4);sc.add(spot);
+ const mat=new THREE.MeshStandardMaterial({color:0xb4bcc8,metalness:.85,roughness:.32});
+ const dark=new THREE.MeshStandardMaterial({color:0x8d96a3,metalness:.9,roughness:.4});
+ const G=new THREE.Group();sc.add(G);
+ const P=.25; // thread pitch
+ // bolt (axis = Y)
+ const bolt=new THREE.Group();
+ const head=new THREE.Mesh(new THREE.CylinderGeometry(1,1,.6,6),mat);head.position.y=-1.55;bolt.add(head);
+ const fl=new THREE.Mesh(new THREE.CylinderGeometry(1.4,1.2,.14,48),mat);fl.position.y=-1.2;bolt.add(fl);
+ const sh=new THREE.Mesh(new THREE.CylinderGeometry(.5,.5,3.2,40),dark);sh.position.y=.43;bolt.add(sh);
+ class Helix extends THREE.Curve{getPoint(t,o=new THREE.Vector3()){const a=t*((3.1-.0)/P)*Math.PI*2;return o.set(.5*Math.cos(a),-1.1+t*3.1,.5*Math.sin(a))}}
+ const th=new THREE.Mesh(new THREE.TubeGeometry(new Helix(),mobile?260:480,.055,6,false),mat);bolt.add(th);
+ G.add(bolt);
+ // nut
+ const hexShape=r=>{const s=new THREE.Shape();for(let i=0;i<6;i++){const a=i*Math.PI/3;i?s.lineTo(r*Math.cos(a),r*Math.sin(a)):s.moveTo(r*Math.cos(a),r*Math.sin(a))}return s};
+ const ring=(s,r)=>{const h=new THREE.Path();h.absarc(0,0,r,0,Math.PI*2,true);s.holes.push(h);return s};
+ const ng=new THREE.ExtrudeGeometry(ring(hexShape(.95),.53),{depth:.8,bevelEnabled:false});ng.translate(0,0,-.4);ng.rotateX(-Math.PI/2);
+ const nut=new THREE.Mesh(ng,mat);G.add(nut);
+ // washer
+ const ws=new THREE.Shape();ws.absarc(0,0,1.15,0,Math.PI*2,false);
+ const wg=new THREE.ExtrudeGeometry(ring(ws,.55),{depth:.12,bevelEnabled:false,curveSegments:48});wg.translate(0,0,-.06);wg.rotateX(-Math.PI/2);
+ const wash=new THREE.Mesh(wg,mat);G.add(wash);
+ G.rotation.z=.35;
+
+ const WY=-1.05,NY=-.59;
+ let eW=1,eN=1,tW=1,tN=1,az=0,dist=15,tD=15,hgt=1,tH=1,tAz=0,mx=0,my=0,userAz=0,drag=false,lx=0,tL=null,auto=true,intro=!RM,t0=performance.now(),spin=0;
+ const sm=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
+ function pose(){wash.position.y=WY+eW*2.4;nut.position.y=NY+eN*4.6;nut.rotation.y=-eN*4.6/P*Math.PI*2}
+ const heroEl=$("#hero");
+ function endIntro(){intro=false;heroEl.classList.add("show");tD=9.5}
+ if(RM){eW=eN=0;tW=tN=0;dist=tD=9.5;heroEl.classList.add("show")}
+ $("#skip").onclick=()=>{endIntro();tW=tN=0;$("#skip").style.display="none"};
+ if(RM)$("#skip").style.display="none";
+ const story=$("#story"),chs=[...document.querySelectorAll(".ch")],pg=$("#pg"),lab=$("#lab");
+ let labOn=false;
+ new IntersectionObserver(e=>{labOn=e[0].isIntersecting},{threshold:.35}).observe(lab);
+ $("#lx").onclick=()=>{tL=1};$("#la").onclick=()=>{tL=0};
+ $("#lr").onclick=function(){auto=!auto;this.textContent="Auto-rotate: "+(auto?"on":"off");this.setAttribute("aria-pressed",auto)};
+ $("#lz").onclick=()=>{tL=0;userAz=0;auto=true;$("#lr").textContent="Auto-rotate: on";$("#lr").setAttribute("aria-pressed","true")};
+ lab.addEventListener("pointerdown",e=>{if(e.target.closest("button"))return;drag=true;lx=e.clientX});
+ addEventListener("pointerup",()=>drag=false);
+ addEventListener("pointermove",e=>{if(drag){userAz+=(e.clientX-lx)*.01;lx=e.clientX}if(e.pointerType==="mouse"){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5}});
+ function size(){
+  const w=innerWidth,h=innerHeight;
+  R.setSize(w,h,false);
+  const aspect=w/h;
+  cam.aspect=aspect;
+  if(aspect<1){
+   const hFov=35*Math.PI/180;
+   const vFov=2*Math.atan(Math.tan(hFov/2)/(aspect*1.28))*(180/Math.PI);
+   cam.fov=Math.min(54,Math.max(35,vFov));
+  }else{
+   cam.fov=35;
+  }
+  cam.updateProjectionMatrix();
+ }
+ addEventListener("resize",size);size();
+ function frame(){
+  requestAnimationFrame(frame);
+  const now=performance.now(),t=(now-t0)/1000;
+  const sr=story.getBoundingClientRect(),sp=Math.max(0,Math.min(1,-sr.top/(sr.height-innerHeight)));
+  const inStory=sr.top<=100&&sr.bottom>=100;
+  let op=1;
+  if(intro&&scrollY<50){
+   tW=1-sm((t-1)/2.2);tN=1-sm((t-3)/3.2);tD=15-5.5*sm(t/6);tAz=t*.25;
+   if(t>5.8)endIntro();
+  }else if(intro){endIntro();tW=tN=0}
+  if(!intro){
+   if(inStory){
+    tW=1-sm((sp-.2)/.2);tN=1-sm((sp-.5)/.3);
+    tD=sp<.35?9.5:sp<.75?5.2:12;tH=sp<.75?.6:2;tAz=sp*Math.PI*1.6;
+    const ci=Math.min(4,Math.floor(sp*5));chs.forEach((c,i)=>c.classList.toggle("on",i===ci));pg.style.width=sp*100+"%";
+   }else if(labOn){
+    if(tL!==null){tW=tN=tL}tD=10;tH=1;if(auto)tAz+=.006;
+   }else{
+    tW=tN=0;tD=sr.bottom<0?11:9.5;tAz+=.002;
+    if(sr.bottom<0){op=Math.max(.15,1-(-sr.bottom)/(innerHeight*1.5))}
+   }
+  }
+  if(!inStory)chs.forEach(c=>c.classList.remove("on"));
+  const k=.07;eW+=(tW-eW)*k;eN+=(tN-eN)*k;dist+=(tD-dist)*.05;hgt+=(tH-hgt)*.05;az+=(tAz-az)*.06;
+  pose();
+  const isMob=innerWidth<820;
+  let targetGx=0;
+  let targetY=0.4;
+  if(!isMob){
+   if(!inStory&&!labOn&&sr.top>=0) targetGx=-0.85;
+  }else{
+   if(!inStory&&!labOn&&sr.top>=0) targetY=-0.32;
+   else if(inStory) targetY=0.18;
+  }
+  G.position.x+=(targetGx-G.position.x)*.06;
+  G.rotation.y=az+userAz+(RM?0:mx*.5);G.rotation.x=RM?0:my*.25;
+  cam.position.set(0,hgt+1,dist);cam.lookAt(0,targetY,0);
+  key.position.x=5+mx*4;
+  cv.style.opacity=op;
+  R.render(sc,cam);
+ }
+ frame();
+})();
+</script>
+</body>
+</html>
