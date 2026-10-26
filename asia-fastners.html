@@ -76,6 +76,8 @@ label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px;font-weight
 .chip.on{background:var(--bl);border-color:var(--bl);color:#FFFFFF}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .lab{min-height:100vh;min-height:100dvh;display:flex;align-items:center;touch-action:pan-y}
+#lab .tools{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:24px 0;max-width:210px}
+#lab .tools .btn{width:100%;text-align:center}
 .pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:24px;box-shadow:var(--sh)}
 .pr div{background:var(--bg2);padding:22px}
 .pr h3{font-size:20px;margin-bottom:6px}
@@ -180,6 +182,8 @@ footer a:hover{color:var(--tx)}
  .bar{bottom:66px;width:120px}
 
  /* Lab tools on mobile */
+ #lab .tools{max-width:200px}
+ #lab .tools .btn{width:100%;flex:none}
  .tools .btn{flex:1 1 120px;text-align:center;padding:10px 8px;font-size:11px}
 
  /* Mobile Contact Showcase Banner */
