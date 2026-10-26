@@ -97,12 +97,12 @@ footer a:hover{color:var(--tx)}
 
 /* ===== Contact Section Redesign (Scoped) ===== */
 #contact{padding:100px 0 110px}
-.contact-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;margin-bottom:56px}
+.contact-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:56px}
 .contact-hero-text .mono{display:inline-block;margin-bottom:10px;color:var(--or);font-weight:600}
 .contact-title{font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.02em;margin:0 0 16px;color:var(--tx)}
 .contact-lead{font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:var(--mu);max-width:44ch}
-.contact-visual{display:flex;justify-content:center;align-items:center}
-.contact-fastener-art{width:100%;max-width:340px;height:auto;filter:drop-shadow(0 12px 28px rgba(15,23,42,.06))}
+.contact-visual{display:flex;justify-content:flex-end;align-items:center}
+.contact-fastener-img{width:100%;max-width:540px;height:auto;display:block;object-fit:cover;border-radius:4px;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 14%);mask-image:linear-gradient(to right,transparent 0%,black 14%)}
 
 /* Contact Information Cards */
 .contact-info-wrap{margin-bottom:48px}
@@ -172,9 +172,9 @@ footer a:hover{color:var(--tx)}
  .tools .btn{flex:1 1 120px;text-align:center;padding:10px 8px;font-size:11px}
 
  /* Mobile Contact Redesign */
- .contact-hero{grid-template-columns:1fr;gap:28px;margin-bottom:36px}
- .contact-visual{order:-1;justify-content:flex-start}
- .contact-fastener-art{max-width:280px}
+ .contact-hero{grid-template-columns:1fr;gap:24px;margin-bottom:36px}
+ .contact-visual{justify-content:center;order:0}
+ .contact-fastener-img{max-width:100%;-webkit-mask-image:none;mask-image:none}
  .contact-grid{grid-template-columns:1fr}
  .contact-item{padding:18px 16px;flex-direction:row;align-items:center;justify-content:space-between;gap:14px}
  .contact-item-top{flex-direction:row}
@@ -332,64 +332,8 @@ footer a:hover{color:var(--tx)}
       <h2 class="contact-title">LET'S BUILD<br>STRONGER CONNECTIONS.</h2>
       <p class="contact-lead">Have a question, product requirement, or partnership enquiry? Our team is here to help.</p>
     </div>
-    <div class="contact-visual" aria-hidden="true">
-      <svg class="contact-fastener-art" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="cfSteel" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#F1F5F9"/>
-            <stop offset="35%" stop-color="#CBD5E1"/>
-            <stop offset="70%" stop-color="#94A3B8"/>
-            <stop offset="100%" stop-color="#64748B"/>
-          </linearGradient>
-          <linearGradient id="cfHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
-            <stop offset="100%" stop-color="#94A3B8" stop-opacity="0.2"/>
-          </linearGradient>
-          <linearGradient id="cfDark" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#475569"/>
-            <stop offset="100%" stop-color="#1E293B"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Technical Axis Lines -->
-        <line x1="25" y1="100" x2="315" y2="100" stroke="rgba(15,23,42,0.12)" stroke-width="1" stroke-dasharray="8 6"/>
-        <line x1="170" y1="20" x2="170" y2="180" stroke="rgba(15,23,42,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
-        <circle cx="170" cy="100" r="82" stroke="rgba(234,88,12,0.14)" stroke-width="1"/>
-
-        <!-- Component A: Precision M12 Hex Flange Bolt -->
-        <g transform="translate(60, 48)">
-          <path d="M42 0 L78 18 L78 44 L42 62 L6 44 L6 18 Z" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
-          <path d="M42 0 L42 62" stroke="#0F172A" stroke-width="0.9" opacity="0.6"/>
-          <path d="M42 0 L78 18 L42 34 L6 18 Z" fill="url(#cfHighlight)"/>
-          <ellipse cx="42" cy="64" rx="44" ry="14" fill="url(#cfDark)" stroke="#0F172A" stroke-width="1.3"/>
-          <ellipse cx="42" cy="62" rx="42" ry="12" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1"/>
-          <path d="M24 70 L24 130 A18 7 0 0 0 60 130 L60 70" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
-          <path d="M24 78 Q42 84 60 78 M24 87 Q42 93 60 87 M24 96 Q42 102 60 96 M24 105 Q42 111 60 105 M24 114 Q42 120 60 114 M24 122 Q42 128 60 122" stroke="#0F172A" stroke-width="1.1" fill="none"/>
-          <circle cx="42" cy="18" r="3" fill="#EA580C"/>
-        </g>
-
-        <!-- Component B: Mating Washer & Hex Nut -->
-        <g transform="translate(202, 68)">
-          <ellipse cx="46" cy="18" rx="35" ry="12" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
-          <ellipse cx="46" cy="18" rx="19" ry="6.5" fill="#F8FAFC" stroke="#0F172A" stroke-width="1.1"/>
-          <g transform="translate(0, 38)">
-            <path d="M46 0 L78 16 L78 40 L46 56 L14 40 L14 16 Z" fill="url(#cfSteel)" stroke="#0F172A" stroke-width="1.3"/>
-            <path d="M46 0 L78 16 L46 30 L14 16 Z" fill="url(#cfHighlight)"/>
-            <ellipse cx="46" cy="30" rx="17" ry="6" fill="url(#cfDark)" stroke="#0F172A" stroke-width="1.1"/>
-            <path d="M46 30 L46 56" stroke="#0F172A" stroke-width="0.9" opacity="0.6"/>
-          </g>
-        </g>
-
-        <!-- Annotations -->
-        <g transform="translate(18, 180)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#525B6A" letter-spacing="0.1em">
-          <text x="0" y="0">ISO 4017 / DIN 933</text>
-          <text x="0" y="12">PRECISION INDUSTRIAL FASTENERS</text>
-        </g>
-        <g transform="translate(240, 28)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#EA580C" letter-spacing="0.12em" font-weight="600">
-          <text x="0" y="0">● PRECISION FIT</text>
-          <text x="0" y="12" fill="#525B6A">GRADE 8.8 / 10.9</text>
-        </g>
-      </svg>
+    <div class="contact-visual">
+      <img src="assets/precision-fasteners.jpg" alt="Precision-engineered metallic nuts, bolts and washers" class="contact-fastener-img" width="1024" height="576" loading="lazy">
     </div>
   </div>
 
