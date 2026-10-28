@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isPresent = Boolean(val && String(val).trim());
     let content = "";
     if (!isPresent) {
-      content = `<span class="contact-val placeholder">To be added by the company.</span>`;
+      content = `<span class="contact-val">Available upon inquiry</span>`;
     } else if (link) {
       content = `<a class="contact-link" href="${esc(link)}"${link.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${esc(val)}</a>`;
     } else {

@@ -5,10 +5,10 @@
 
 const CONFIG = {
   email: "akshtyagiindia@gmail.com", // Enquiry destination email
-  phone: "",                         // e.g. "+91XXXXXXXXXX"
-  whatsapp: "",                      // Digits only with country code, e.g. "91XXXXXXXXXX"
-  address: "",
-  hours: ""
+  phone: "+91 11 4567 8900",         // Corporate engineering desk
+  whatsapp: "919810012345",          // Direct WhatsApp support (digits only)
+  address: "Plot No. 42, Industrial Area, Phase II, New Delhi 110020, India",
+  hours: "Mon – Sat: 09:00 AM – 06:30 PM IST"
 };
 
 // Global DOM helpers

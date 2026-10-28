@@ -257,7 +257,7 @@
           if (st) {
             st.style.borderColor = "#F59E0B";
             st.style.color = "#B45309";
-            st.innerHTML = "<strong>Local File Notice:</strong><br>Email dispatch services block submissions from local <code>file:///</code> paths for spam prevention.<br><br>👉 Run this in your terminal:<br><code>node server.js</code><br>Then open: <strong><a href='http://localhost:3000/asia-fastners.html' target='_blank' style='text-decoration:underline;color:inherit'>http://localhost:3000/asia-fastners.html</a></strong><br><small><em>(Once pushed to GitHub Pages or any web host, it works automatically without any local server).</em></small>";
+            st.innerHTML = "<strong>Local File Notice:</strong><br>Email dispatch services block submissions from local <code>file:///</code> paths for spam prevention.<br><br>👉 Run this in your terminal:<br><code>node server.js</code><br>Then open: <strong><a href='http://localhost:3000/' target='_blank' style='text-decoration:underline;color:inherit'>http://localhost:3000/</a></strong><br><small><em>(Once pushed to GitHub Pages or any web host, it works automatically without any local server).</em></small>";
           }
           if (btn) {
             btn.disabled = false;

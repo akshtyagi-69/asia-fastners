@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return `
       <article class="p-card${hl.includes(p.id) ? " hl" : ""}" data-id="${p.id}">
         <div class="p-card-media" data-media-id="${p.id}">
-          <img src="${v.img}" alt="${esc(v.name)}" class="p-card-img" id="img-${p.id}" loading="lazy" width="400" height="240">
+          <img src="${v.img}" alt="${esc(v.name)} - Precision Industrial Fastener" class="p-card-img" id="img-${p.id}" loading="lazy" width="400" height="240">
           <span class="p-card-cat mono">${esc(p.cat)}</span>
 
           ${isMultiple ? `

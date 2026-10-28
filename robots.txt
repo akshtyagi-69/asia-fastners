@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_backup_pre_refactor/
+Disallow: /server.js
+
+Sitemap: https://asiafastners.com/sitemap.xml

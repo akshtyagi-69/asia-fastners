@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       imgEl.classList.add("fading");
       setTimeout(() => {
         imgEl.src = data.img;
-        imgEl.alt = `${data.title} Fasteners`;
+        imgEl.alt = `${data.title} Fastener Applications - Asia Fastners`;
         imgEl.classList.remove("fading");
       }, 200);
     }
