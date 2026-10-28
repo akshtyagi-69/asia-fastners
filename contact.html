@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us | ASIA FASTNERS PVT LTD</title>
+<meta name="description" content="Get in touch with Asia Fastners Pvt Ltd for industrial fastener enquiries, product specifications, bulk pricing, and custom technical requirements.">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<nav id="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="asia-fastners.html">ASIA <b>FASTNERS</b></a>
+    <button id="menu" aria-expanded="false" aria-controls="nl">MENU</button>
+    <ul id="nl">
+      <li><a href="asia-fastners.html#hero">Home</a></li>
+      <li><a href="asia-fastners.html#about">About</a></li>
+      <li><a href="asia-fastners.html#products">Products</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="asia-fastners.html#quality">Quality</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a class="btn p" href="#quote">Request a Quote</a>
+  </div>
+</nav>
+
+<main id="contact">
+  <div class="wrap">
+    <!-- Industrial Showcase Hero Banner -->
+    <div class="contact-hero-banner">
+      <img src="assets/precision-fasteners.jpg" alt="Precision-engineered metallic nuts, bolts and washers" class="contact-banner-img" width="1024" height="576" loading="eager">
+      
+      <div class="contact-banner-overlay" aria-hidden="true"></div>
+      <svg class="contact-banner-slant" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="orangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="1.8" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <pattern id="bannerGrid" width="6" height="6" patternUnits="userSpaceOnUse">
+            <path d="M 6 0 L 0 0 0 6" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <polygon points="0,0 52,0 37,100 0,100" fill="url(#bannerGrid)" />
+        <line x1="52" y1="0" x2="37" y2="100" stroke="#EA580C" stroke-width="0.85" opacity="0.95" filter="url(#orangeGlow)"/>
+      </svg>
+
+      <div class="contact-banner-content">
+        <div class="contact-banner-tag">
+          <span class="contact-tag-bar"></span>
+          <span class="mono">CONTACT US</span>
+        </div>
+        <h1 class="contact-banner-title">LET'S BUILD<br>SOMETHING <span class="highlight">SOLID.</span></h1>
+        <p class="contact-banner-desc">Precision fasteners. Reliable partnerships.<br>Engineering confidence into every connection.</p>
+        <div>
+          <a class="btn p contact-banner-btn" href="#quote">Start a Conversation <span class="contact-btn-arrow">&rarr;</span></a>
+        </div>
+      </div>
+
+      <div class="contact-banner-specs" aria-hidden="true">
+        <span>NUTS</span>
+        <span>BOLTS</span>
+        <span>SCREWS</span>
+        <span>WASHERS</span>
+        <span>FLANGE BOLTS</span>
+        <span>SEM SCREWS</span>
+        <span>AND MORE</span>
+      </div>
+    </div>
+
+    <!-- Refined Contact Information Section -->
+    <div class="contact-info-wrap">
+      <div class="contact-grid" id="ci"></div>
+    </div>
+
+    <!-- Minimalist Enquiry CTA Section -->
+    <div class="contact-cta">
+      <div class="contact-cta-left">
+        <p class="mono" style="color:var(--or)">Direct Quotations</p>
+        <h3>SEND US A MESSAGE.</h3>
+        <p>Tell us what you need, and let's find the right fastening solution for your business.</p>
+      </div>
+      <div class="contact-cta-right">
+        <a class="btn p" href="#quote">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <a class="brand" href="asia-fastners.html">ASIA <b>FASTNERS</b> PVT LTD</a>
+    <ul style="margin:0">
+      <li><a href="asia-fastners.html#about">About</a></li>
+      <li><a href="asia-fastners.html#products">Products</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="asia-fastners.html#quality">Quality</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+    <p class="mono">&copy; <span id="yr"></span> ASIA FASTNERS PVT LTD &bull; All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Quotation Modal Popup -->
+<div id="quoteModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="quoteModalClose" type="button" aria-label="Close quotation form">&times;</button>
+    <div class="two">
+      <div>
+        <p class="mono">Quotation</p>
+        <h2 id="quoteModalTitle">REQUEST A QUOTE.</h2>
+        <p style="color:var(--mu);margin-bottom:18px">Specify what you need in the form below. Your enquiry is delivered directly to our team.</p>
+      </div>
+      <div>
+        <form id="f" action="https://formsubmit.co/akshtyagiindia@gmail.com" method="POST" target="hidden_iframe" novalidate>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" id="f_sub" value="New Fastener Quotation Enquiry — Asia Fastners Pvt Ltd">
+          <div style="display:grid;gap:14px">
+            <div><label for="n">Name *</label><input id="n" name="Name" required autocomplete="name"></div>
+            <div><label for="co">Company</label><input id="co" name="Company" autocomplete="organization"></div>
+            <div><label for="e">Email *</label><input id="e" name="Email" type="email" required autocomplete="email"></div>
+            <div><label for="p">Phone / WhatsApp *</label><input id="p" name="Phone_WhatsApp" type="tel" required autocomplete="tel"></div>
+            <div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" name="Message" rows="4"></textarea></div>
+            <button class="btn p" id="f_btn" type="submit">Send enquiry</button>
+          </div>
+          <div id="st" role="alert"></div>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Submission Handler"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nut & Bolt Cinematic Page Transition Overlay -->
+<div id="nutBoltOverlay" class="nb-overlay" aria-hidden="true">
+  <div class="nb-vignette"></div>
+  <div class="nb-center">
+    <div class="nb-assembly-graphic">
+      <svg class="nb-svg" viewBox="0 0 160 160" fill="none">
+        <defs>
+          <linearGradient id="nbSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F1F5F9"/>
+            <stop offset="45%" stop-color="#94A3B8"/>
+            <stop offset="100%" stop-color="#334155"/>
+          </linearGradient>
+          <linearGradient id="nbDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#475569"/>
+            <stop offset="100%" stop-color="#0F172A"/>
+          </linearGradient>
+          <filter id="nbGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke="rgba(234,88,12,0.25)" stroke-width="1.2" stroke-dasharray="8 6" class="nb-spin-cw"/>
+        <circle cx="80" cy="80" r="54" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <rect x="68" y="24" width="24" height="106" rx="3" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+        <line x1="68" y1="46" x2="92" y2="52" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="58" x2="92" y2="64" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="70" x2="92" y2="76" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="82" x2="92" y2="88" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="94" x2="92" y2="100" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="106" x2="92" y2="112" stroke="#0F172A" stroke-width="1.5"/>
+        <ellipse cx="80" cy="116" rx="42" ry="12" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+        <g class="nb-fastening-nut">
+          <polygon points="52,66 108,66 100,92 60,92" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+          <ellipse cx="80" cy="79" rx="14" ry="5.5" fill="url(#nbDark)"/>
+        </g>
+        <circle cx="80" cy="106" r="34" stroke="#EA580C" stroke-width="2.5" class="nb-spark-burst" filter="url(#nbGlow)"/>
+      </svg>
+    </div>
+    <div class="nb-status">
+      <span class="mono nb-title" id="nbStatusText">DISENGAGING & NAVIGATING...</span>
+      <div class="nb-track"><div class="nb-meter"></div></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/transition.js"></script>
+<script src="js/quote-modal.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
