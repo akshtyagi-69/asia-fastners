@@ -38,12 +38,12 @@ section{padding:100px 0}
 .dark{background:rgba(241,245,249,.85);backdrop-filter:blur(8px)}
 .alt{background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
 #hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;padding:120px 0 90px}
-#hero .wrap{width:100%;display:flex;justify-content:flex-end}
-#hero .t{max-width:540px;margin-left:auto;opacity:0;transition:opacity 1s}
+#hero .wrap{width:100%;max-width:min(1360px,94vw);display:flex;justify-content:flex-end;padding-right:clamp(20px,4vw,60px)}
+#hero .t{max-width:480px;margin-left:auto;opacity:0;transition:opacity 1s}
 #hero.show .t{opacity:1}
 #hero .mono{color:var(--mu)}
-#hero h1{color:var(--tx)}
-#hero p.l{max-width:46ch;margin:18px 0 28px;font-size:18px;color:var(--mu)}
+#hero h1{color:var(--tx);font-size:clamp(28px,4.5vw,62px)}
+#hero p.l{max-width:44ch;margin:18px 0 28px;font-size:17px;color:var(--mu)}
 .row{display:flex;gap:12px;flex-wrap:wrap}
 #skip{position:fixed;right:22px;bottom:84px;z-index:25}
 #story{height:560vh;padding:0;position:relative}
@@ -728,7 +728,7 @@ $("#f").onsubmit=async function(e){
   let targetGx=0;
   let targetY=0.4;
   if(!isMob){
-   if(!inStory&&!labOn&&sr.top>=0) targetGx=-0.85;
+   if(!inStory&&!labOn&&sr.top>=0) targetGx=-1.45;
   }else{
    if(!inStory&&!labOn&&sr.top>=0) targetY=-0.32;
    else if(inStory) targetY=0.18;
