@@ -91,6 +91,14 @@ label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px;font-weight
 .mob a,.mob button{flex:1;padding:16px 6px;text-align:center;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.12em;text-decoration:none;text-transform:uppercase;color:var(--tx);background:none;border:0;cursor:pointer}
 .mob .q{background:var(--or);color:#FFFFFF}
 #st{margin-top:14px;padding:12px;border:1px solid var(--ln);background:var(--bg2);display:none}
+
+/* ===== Quotation Modal ===== */
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:60;display:flex;align-items:center;justify-content:center;padding:24px 16px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}
+.modal-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}
+.modal-box{background:var(--bg2);border:1px solid var(--ln);border-radius:8px;box-shadow:0 25px 60px -15px rgba(0,0,0,.35),0 10px 20px -5px rgba(0,0,0,.15);max-width:960px;width:100%;max-height:calc(100vh - 48px);max-height:calc(100dvh - 48px);overflow-y:auto;padding:44px 40px;position:relative;transform:scale(.96) translateY(14px);transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.modal-backdrop.open .modal-box{transform:scale(1) translateY(0)}
+.modal-close{position:absolute;top:18px;right:18px;width:36px;height:36px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;transition:.2s;z-index:2}
+.modal-close:hover{border-color:var(--or);color:var(--or);transform:rotate(90deg)}
 footer{background:var(--bg);border-top:1px solid var(--ln);padding:50px 0 100px}
 footer ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;padding:0;margin:18px 0}
 footer a{color:var(--mu);text-decoration:none;font-size:14px}
@@ -202,6 +210,8 @@ footer a:hover{color:var(--tx)}
  .contact-cta{flex-direction:column;align-items:flex-start;padding:26px 20px;gap:20px}
  .contact-cta-right{width:100%}
  .contact-cta-right .btn{width:100%;text-align:center}
+ .modal-box{padding:32px 18px 24px}
+ .modal-box .two{grid-template-columns:1fr;gap:20px}
 }
 @media(max-width:540px){
  .contact-item{flex-direction:column;align-items:flex-start;gap:10px}
@@ -308,38 +318,10 @@ footer a:hover{color:var(--tx)}
 </div>
 </section>
 
-<section id="catalogue" class="dark">
+<section id="catalogue" class="alt">
 <div class="wrap two">
 <div><p class="mono">Catalogue</p><h2>ENGINEERED FOR EVERY CONNECTION.</h2></div>
 <div id="cat" style="margin-top:30px"></div>
-</div>
-</section>
-
-<section id="quote" class="alt">
-<div class="wrap two">
-<div>
-<p class="mono">Quotation</p>
-<h2>REQUEST A QUOTE.</h2>
-<p style="color:var(--mu)">Add products to your enquiry basket, or specify what you need in the form below. Your enquiry is sent directly to our team.</p>
-<div id="sum" style="margin-top:20px"></div>
-<button class="btn" type="button" id="open2">Edit enquiry basket</button>
-</div>
-<form id="f" action="https://formsubmit.co/akshtyagiindia@gmail.com" method="POST" target="hidden_iframe" novalidate>
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_subject" id="f_sub" value="New Fastener Quotation Enquiry — Asia Fastners Pvt Ltd">
-<input type="hidden" name="Selected_Products" id="f_prods" value="">
-<div style="display:grid;gap:14px">
-<div><label for="n">Name *</label><input id="n" name="Name" required autocomplete="name"></div>
-<div><label for="co">Company</label><input id="co" name="Company" autocomplete="organization"></div>
-<div><label for="e">Email *</label><input id="e" name="Email" type="email" required autocomplete="email"></div>
-<div><label for="p">Phone / WhatsApp *</label><input id="p" name="Phone_WhatsApp" type="tel" required autocomplete="tel"></div>
-<div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" name="Message" rows="4"></textarea></div>
-<button class="btn p" id="f_btn" type="submit">Send enquiry</button>
-</div>
-<div id="st" role="alert"></div>
-</form>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Submission Handler"></iframe>
 </div>
 </section>
 
@@ -430,6 +412,40 @@ footer a:hover{color:var(--tx)}
 <a class="q" href="#quote">Request a Quote</a>
 <a id="mc" href="#contact">Call</a>
 <a id="mw" href="#contact" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<!-- Quotation Modal Popup (Opens on 'Request a Quote') -->
+<div id="quoteModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="quoteModalClose" type="button" aria-label="Close quotation form">&times;</button>
+    <div class="two">
+      <div>
+        <p class="mono">Quotation</p>
+        <h2 id="quoteModalTitle">REQUEST A QUOTE.</h2>
+        <p style="color:var(--mu);margin-bottom:18px">Add products to your enquiry basket, or specify what you need in the form below. Your enquiry is delivered directly to our team.</p>
+        <div id="sum" style="margin-top:20px"></div>
+        <button class="btn" type="button" id="open2" style="margin-top:16px">Edit enquiry basket</button>
+      </div>
+      <div>
+        <form id="f" action="https://formsubmit.co/akshtyagiindia@gmail.com" method="POST" target="hidden_iframe" novalidate>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" id="f_sub" value="New Fastener Quotation Enquiry — Asia Fastners Pvt Ltd">
+          <input type="hidden" name="Selected_Products" id="f_prods" value="">
+          <div style="display:grid;gap:14px">
+            <div><label for="n">Name *</label><input id="n" name="Name" required autocomplete="name"></div>
+            <div><label for="co">Company</label><input id="co" name="Company" autocomplete="organization"></div>
+            <div><label for="e">Email *</label><input id="e" name="Email" type="email" required autocomplete="email"></div>
+            <div><label for="p">Phone / WhatsApp *</label><input id="p" name="Phone_WhatsApp" type="tel" required autocomplete="tel"></div>
+            <div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" name="Message" rows="4"></textarea></div>
+            <button class="btn p" id="f_btn" type="submit">Send enquiry</button>
+          </div>
+          <div id="st" role="alert"></div>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Submission Handler"></iframe>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -554,9 +570,34 @@ function renderB(){
 $("#items").addEventListener("input",e=>{const t=e.target,i=t.dataset.i;if(i===undefined)return;basket[i][t.dataset.k]=t.dataset.k==="qty"?Math.max(1,parseInt(t.value)||1):t.value;try{localStorage.setItem("af_basket",JSON.stringify(basket))}catch(x){}$("#sum").innerHTML=basket.map(b=>`<p class="mono" style="color:var(--tx)">${esc(b.name)} — ${b.qty} pcs${b.size?" — "+esc(b.size):""}${b.grade?" — "+esc(b.grade):""}</p>`).join("")});
 $("#items").addEventListener("click",e=>{const r=e.target.dataset.rm;if(r!==undefined){basket.splice(+r,1);save()}});
 const dr=$("#drawer"),oD=o=>{dr.classList.toggle("open",o);dr.setAttribute("aria-hidden",!o)};
-$("#bk").onclick=()=>oD(true);$("#open2").onclick=()=>oD(true);$("#cl").onclick=()=>oD(false);$("#gq").onclick=()=>oD(false);
+$("#bk").onclick=()=>oD(true);$("#open2").onclick=()=>oD(true);$("#cl").onclick=()=>oD(false);
 addEventListener("keydown",e=>{if(e.key==="Escape")oD(false)});
 renderB();
+
+/* ===== Quotation Modal ===== */
+const qm=$("#quoteModal");
+function openQuote(e){
+ if(e&&e.preventDefault)e.preventDefault();
+ qm.classList.add("open");
+ qm.setAttribute("aria-hidden","false");
+ document.body.style.overflow="hidden";
+ setTimeout(()=>{const inp=$("#n");if(inp)inp.focus()},120);
+}
+function closeQuote(){
+ qm.classList.remove("open");
+ qm.setAttribute("aria-hidden","true");
+ document.body.style.overflow="";
+ if(location.hash==="#quote"){
+  try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}
+ }
+}
+$("#quoteModalClose").onclick=closeQuote;
+qm.addEventListener("click",e=>{if(e.target===qm)closeQuote()});
+addEventListener("keydown",e=>{if(e.key==="Escape"&&qm.classList.contains("open"))closeQuote()});
+document.querySelectorAll('a[href="#quote"]').forEach(a=>{a.addEventListener("click",openQuote)});
+$("#gq").onclick=()=>{oD(false);openQuote()};
+if(location.hash==="#quote"){setTimeout(openQuote,150)}
+window.addEventListener("hashchange",()=>{if(location.hash==="#quote")openQuote()});
 
 /* ===== Quote form (Direct submission: sends to akshtyagiindia@gmail.com without opening mail app) ===== */
 $("#f").onsubmit=async function(e){
