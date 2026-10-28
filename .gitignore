@@ -9,3 +9,6 @@ node_modules/
 # Backups & Logs
 _backup_pre_refactor/
 *.log
+
+*.zip
+asia fastners/

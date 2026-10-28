@@ -23,9 +23,6 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -36,9 +33,7 @@ body {
   background-image: linear-gradient(var(--ln) 1px, transparent 1px), linear-gradient(90deg, var(--ln) 1px, transparent 1px);
   background-size: 64px 64px;
   padding-bottom: 74px;
-  overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
+  overflow-x: clip;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }

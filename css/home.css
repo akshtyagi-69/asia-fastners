@@ -88,8 +88,6 @@ section {
   height: 560vh;
   padding: 0;
   position: relative;
-  overflow: hidden;
-  max-width: 100%;
 }
 
 .stick {
@@ -101,8 +99,6 @@ section {
   align-items: center;
   z-index: 10;
   pointer-events: none;
-  overflow: hidden;
-  max-width: 100%;
 }
 
 .stick .wrap {
@@ -840,7 +836,9 @@ section {
     opacity: 0;
     visibility: hidden;
   }
-  .ch.on {
+  .ch.on,
+  .ch.ch-left.on,
+  .ch.ch-right.on {
     transform: translateY(0) !important;
     opacity: 1 !important;
     visibility: visible !important;
