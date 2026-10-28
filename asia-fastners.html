@@ -5,83 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ASIA FASTNERS PVT LTD — Precision That Holds Everything Together</title>
 <meta name="description" content="Industrial fasteners for dependable connections: hex bolts, flange bolts, hex nuts, SEM screws, washers and screws.">
-<style>
-:root{--bg:#0B0D10;--bg2:#15191F;--tx:#F4F6F8;--mu:#A5ADB7;--bl:#2457A7;--or:#F47735;--ln:rgba(165,173,183,.18)}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:64px 64px;padding-bottom:64px}
-.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--mu)}
-h1,h2,h3{font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.05;letter-spacing:-.02em}
-h1{font-size:clamp(34px,7vw,84px);max-width:14ch}
-h2{font-size:clamp(28px,4.5vw,56px);max-width:18ch;margin:8px 0 18px}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--or);outline-offset:3px}
-#c{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
-main,header,footer{position:relative;z-index:1}
-.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s}
-nav.s{background:rgba(11,13,16,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
-nav .wrap{display:flex;align-items:center;gap:22px;height:64px}
-.brand{font-weight:700;letter-spacing:.16em;text-decoration:none;font-size:14px}
-.brand b{color:var(--or)}
-nav ul{display:flex;gap:20px;list-style:none;margin-left:auto;padding:0}
-nav ul a{text-decoration:none;font-size:13px;letter-spacing:.1em;color:var(--mu);background:linear-gradient(var(--or),var(--or)) 0 100%/0 1px no-repeat;transition:.3s;padding-bottom:3px}
-nav ul a:hover{color:var(--tx);background-size:100% 1px}
-.btn{display:inline-block;border:1px solid var(--tx);background:none;color:var(--tx);padding:12px 22px;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:.25s}
-.btn:hover{transform:translateY(-2px);border-color:var(--or)}
-.btn.p{background:var(--or);border-color:var(--or);color:#0B0D10}
-.btn.b{background:var(--bl);border-color:var(--bl)}
-#menu{display:none;margin-left:auto;background:none;border:1px solid var(--ln);color:var(--tx);padding:8px 12px}
-section{padding:100px 0}
-.dark{background:rgba(11,13,16,.9)}
-.alt{background:rgba(21,25,31,.94)}
-#hero{min-height:100vh;display:flex;align-items:flex-end;padding:120px 0 90px}
-#hero .t{opacity:0;transform:translateY(24px);transition:1.2s}
-#hero.show .t{opacity:1;transform:none}
-#hero p.l{max-width:46ch;color:var(--mu);margin:18px 0 28px;font-size:18px}
-.row{display:flex;gap:12px;flex-wrap:wrap}
-#skip{position:fixed;right:22px;bottom:84px;z-index:25}
-#story{height:560vh;padding:0}
-.stick{position:sticky;top:0;height:100vh;display:flex;align-items:center}
-.ch{position:absolute;opacity:0;transform:translateY(20px);transition:.6s;max-width:520px;pointer-events:none}
-.ch.on{opacity:1;transform:none}
-.ch p{color:var(--mu)}
-.bar{position:absolute;left:22px;bottom:40px;width:140px;height:2px;background:var(--ln)}
-.bar i{display:block;height:100%;background:var(--or);width:0}
-.tools{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
-input,select,textarea{background:var(--bg2);border:1px solid var(--ln);color:var(--tx);padding:12px;font:inherit;width:100%}
-label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln)}
-.card{background:var(--bg2);padding:26px;display:flex;flex-direction:column;gap:10px;min-height:240px;transition:.3s}
-.card:hover{background:#1b2028}
-.card.hl{box-shadow:inset 0 0 0 2px var(--or)}
-.card h3{font-size:26px}
-.card p{color:var(--mu);font-size:14px;flex:1}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.chip{border:1px solid var(--ln);background:none;color:var(--tx);padding:9px 14px;cursor:pointer;font-size:14px}
-.chip.on{background:var(--bl);border-color:var(--bl)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.lab{min-height:100vh;display:flex;align-items:center;touch-action:pan-y}
-.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:24px}
-.pr div{background:var(--bg2);padding:22px}
-.pr h3{font-size:20px;margin-bottom:6px}
-.pr p{color:var(--mu);font-size:14px}
-#drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg2);z-index:40;transform:translateX(105%);transition:.4s;padding:22px;overflow:auto;border-left:1px solid var(--ln)}
-#drawer.open{transform:none}
-.it{border-top:1px solid var(--ln);padding:14px 0;display:grid;gap:8px}
-.it .r{display:grid;grid-template-columns:90px 1fr 1fr;gap:8px}
-#bk{position:fixed;right:18px;bottom:78px;z-index:30;display:none}
-.mob{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;background:rgba(11,13,16,.95);border-top:1px solid var(--ln)}
-.mob a,.mob button{flex:1;padding:16px 6px;text-align:center;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.12em;text-decoration:none;text-transform:uppercase;color:var(--tx);background:none;border:0;cursor:pointer}
-.mob .q{background:var(--or);color:#0B0D10}
-#st{margin-top:14px;padding:12px;border:1px solid var(--ln);display:none}
-footer{background:var(--bg);border-top:1px solid var(--ln);padding:50px 0 100px}
-footer ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;padding:0;margin:18px 0}
-footer a{color:var(--mu);text-decoration:none;font-size:14px}
-.no3d #c{display:none}
-@media(max-width:820px){nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px 22px;border-bottom:1px solid var(--ln)}nav ul.o{display:flex}#menu{display:block}nav .btn{display:none}.two{grid-template-columns:1fr}section{padding:70px 0}.it .r{grid-template-columns:1fr 1fr}#hero{padding-bottom:110px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}#hero .t{opacity:1;transform:none}}
-</style>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 <canvas id="c" aria-hidden="true"></canvas>
@@ -91,30 +18,31 @@ footer a{color:var(--mu);text-decoration:none;font-size:14px}
 <a class="brand" href="#hero">ASIA <b>FASTNERS</b></a>
 <button id="menu" aria-expanded="false" aria-controls="nl">MENU</button>
 <ul id="nl">
-<li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Industries</a></li><li><a href="#quality">Quality</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="#contact">Contact</a></li>
+<li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="industries.html">Industries</a></li><li><a href="quality.html">Quality</a></li><li><a href="#contact">Contact</a></li>
 </ul>
 <a class="btn p" href="#quote">Request a Quote</a>
 </div>
 </nav>
 
-<main>
+<main id="homeView">
 <section id="hero" aria-label="Introduction">
-<div class="wrap t">
+<div class="wrap">
+<div class="t">
 <p class="mono">ASIA FASTNERS PVT LTD</p>
 <h1>PRECISION THAT HOLDS EVERYTHING TOGETHER.</h1>
 <p class="l">Industrial fasteners for dependable connections across demanding applications.</p>
 <div class="row"><a class="btn p" href="#products">Explore Products</a><a class="btn" href="#quote">Request a Quote</a></div>
 </div>
+</div>
 </section>
-<button class="btn" id="skip" type="button">Skip intro</button>
 
 <section id="story" aria-label="Engineering story">
-<div class="stick"><div class="wrap" style="position:relative;width:100%;height:60vh">
-<div class="ch" data-i="0"><p class="mono">Chapter 01 — The component</p><h2>BUILT FOR THE CONNECTION.</h2><p>Head, flange, shaft and thread: every part of a fastener has a job.</p></div>
-<div class="ch" data-i="1"><p class="mono">Chapter 02 — The components</p><h2>EVERY COMPONENT HAS A PURPOSE.</h2><p>A washer spreads the load. A nut turns the thread into clamping force.</p></div>
-<div class="ch" data-i="2"><p class="mono">Chapter 03 — Alignment</p><h2>PRECISION CHANGES EVERYTHING.</h2><p>Washer and nut line up on the shaft axis before they meet the thread.</p></div>
-<div class="ch" data-i="3"><p class="mono">Chapter 04 — The connection</p><h2>STRENGTH BEGINS WITH PRECISION.</h2><p>The nut advances along the thread one pitch per turn and seats on the washer.</p></div>
-<div class="ch" data-i="4"><p class="mono">Chapter 05 — The bigger picture</p><h2>ONE RELIABLE CONNECTION. ENDLESS POSSIBILITIES.</h2><p>From machinery to infrastructure, it starts with a single joint.</p></div>
+<div class="stick"><div class="wrap">
+<div class="ch ch-left" data-i="0"><p class="mono">Chapter 01 — Asia Fastners</p><h2>PRECISION IN EVERY JOINT.</h2><p>Head, flange, shank, and thread: engineered with micron-level tolerances for mission-critical assemblies.</p></div>
+<div class="ch ch-right" data-i="1"><p class="mono">Chapter 02 — Product Spectrum</p><h2>EVERY COMPONENT HAS A PURPOSE.</h2><p>High-tensile hex bolts, flange fasteners, SEM screws, and load-distributing washers — all manufactured under one roof.</p></div>
+<div class="ch ch-left" data-i="2"><p class="mono">Chapter 03 — Engineering Standards</p><h2>PRECISION CHANGES EVERYTHING.</h2><p>Rigorous quality controls and tight tolerances ensure seamless mating and superior clamping load.</p></div>
+<div class="ch ch-right" data-i="3"><p class="mono">Chapter 04 — Built for Demands</p><h2>STRENGTH BEGINS WITH PRECISION.</h2><p>Engineered to resist high vibration, shear forces, and fatigue across automotive, heavy machinery, and construction.</p></div>
+<div class="ch ch-left" data-i="4"><p class="mono">Chapter 05 — The Asia Fastners Promise</p><h2>ONE RELIABLE CONNECTION. ENDLESS POSSIBILITIES.</h2><p>Supplying world-class fastening solutions that hold heavy industries, machines, and infrastructure together.</p></div>
 <div class="bar" aria-hidden="true"><i id="pg"></i></div>
 </div></div>
 </section>
@@ -128,21 +56,94 @@ footer a{color:var(--mu);text-decoration:none;font-size:14px}
 <button class="btn b" id="lx" type="button">Exploded view</button>
 <button class="btn" id="la" type="button">Assemble</button>
 <button class="btn" id="lr" type="button" aria-pressed="true">Auto-rotate: on</button>
-<button class="btn" id="lz" type="button">Reset</button>
 </div>
 </div>
 </section>
 
-<section id="about" class="dark">
-<div class="wrap two">
-<div><p class="mono">Company</p><h2>BUILT AROUND RELIABLE CONNECTIONS.</h2></div>
-<p style="color:var(--mu);font-size:18px;margin-top:30px">ASIA FASTNERS PVT LTD supplies industrial fastening products for professional procurement and industrial applications. Company history, facilities and credentials will be published here once verified information is supplied.</p>
-</div>
+<section id="about" class="about-section" aria-label="About Asia Fastners">
+  <div class="about-bg-layer" aria-hidden="true">
+    <img src="assets/about-fasteners-background.png" alt="" class="about-bg-img" width="1024" height="576" loading="lazy">
+    <div class="about-bg-gradient"></div>
+  </div>
+
+  <div class="wrap about-wrap">
+    <div class="about-content">
+      <div class="about-tag-row about-reveal about-reveal-1">
+        <span class="about-tag-dash" aria-hidden="true"></span>
+        <span class="about-tag-label">ABOUT ASIA FASTNERS</span>
+      </div>
+
+      <h2 class="about-heading about-reveal about-reveal-2">
+        ENGINEERED FOR<br>
+        EVERY CONNECTION<span class="about-dot">.</span>
+      </h2>
+
+      <div class="about-description about-reveal about-reveal-3">
+        <p>ASIA FASTNERS PVT LTD supplies industrial fastening products for professional procurement and industrial applications.</p>
+        <p>We focus on precision, product consistency and dependable supply for industrial requirements.</p>
+      </div>
+
+      <div class="about-cta-row about-reveal about-reveal-4">
+        <a href="#products" class="about-cta-link">
+          <span class="about-cta-text">EXPLORE OUR CAPABILITIES</span>
+          <span class="about-cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="about-highlights about-reveal about-reveal-5">
+        <div class="about-highlight-item">
+          <div class="about-icon-wrap">
+            <svg class="about-highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <div class="about-highlight-text">
+            <span>PRECISION</span>
+            <span>PRODUCTS</span>
+          </div>
+        </div>
+
+        <div class="about-highlight-sep" aria-hidden="true"></div>
+
+        <div class="about-highlight-item">
+          <div class="about-icon-wrap">
+            <svg class="about-highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="about-highlight-text">
+            <span>CONSISTENT</span>
+            <span>QUALITY</span>
+          </div>
+        </div>
+
+        <div class="about-highlight-sep" aria-hidden="true"></div>
+
+        <div class="about-highlight-item">
+          <div class="about-icon-wrap">
+            <svg class="about-highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="3" width="14" height="13" rx="1.5"></rect>
+              <polygon points="15 8 19 8 22 12 22 16 15 16 15 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="17.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div class="about-highlight-text">
+            <span>RELIABLE</span>
+            <span>SUPPLY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="products" class="alt">
 <div class="wrap">
-<p class="mono">Catalogue</p>
+<p class="mono">Products</p>
 <h2>SIX FAMILIES OF CONNECTION.</h2>
 <div class="tools">
 <div style="flex:2;min-width:200px"><label for="q">Search</label><input id="q" type="search" placeholder="e.g. flange"></div>
@@ -153,78 +154,91 @@ footer a{color:var(--mu);text-decoration:none;font-size:14px}
 <p class="mono" style="margin-top:14px">Sizes, grades, materials and finishes: shared on request. None are listed until confirmed.</p>
 </div>
 </section>
-
-<section id="industries" class="dark">
-<div class="wrap">
-<p class="mono">Potential applications</p>
-<h2>WHERE CONNECTIONS MATTER.</h2>
-<div class="chips" id="ind"></div>
-<p id="indtx" style="color:var(--mu);max-width:60ch;min-height:56px">Select an industry to highlight the related fastener families above.</p>
-</div>
-</section>
-
-<section id="quality" class="alt">
-<div class="wrap">
-<p class="mono">Principles</p>
-<h2>MANY COMPONENTS. ONE RELIABLE CONNECTION.</h2>
-<div class="pr">
-<div><h3>QUALITY</h3><p>A brand principle that guides how products are presented.</p></div>
-<div><h3>PRECISION</h3><p>Attention to fit between mating components.</p></div>
-<div><h3>RELIABILITY</h3><p>Dependable supply is the aim of every enquiry.</p></div>
-<div><h3>PRODUCT RANGE</h3><p>Bolts, nuts, screws and washers in one place.</p></div>
-<div><h3>CUSTOMER SERVICE</h3><p>Clear communication from request to reply.</p></div>
-<div><h3>RESPONSIVE ENQUIRIES</h3><p>Multi-product enquiries in a single request.</p></div>
-</div>
-<p class="mono" style="margin-top:14px">These are principles, not claims of certification or tested performance.</p>
-</div>
-</section>
-
-<section id="catalogue" class="dark">
-<div class="wrap two">
-<div><p class="mono">Catalogue</p><h2>ENGINEERED FOR EVERY CONNECTION.</h2></div>
-<div id="cat" style="margin-top:30px"></div>
-</div>
-</section>
-
-<section id="quote" class="alt">
-<div class="wrap two">
-<div>
-<p class="mono">Quotation</p>
-<h2>REQUEST A QUOTE.</h2>
-<p style="color:var(--mu)">Add products to your enquiry basket, then send the request. Your email app opens with the full enquiry prefilled.</p>
-<div id="sum" style="margin-top:20px"></div>
-<button class="btn" type="button" id="open2">Edit enquiry basket</button>
-</div>
-<form id="f" novalidate>
-<div style="display:grid;gap:14px">
-<div><label for="n">Name *</label><input id="n" required autocomplete="name"></div>
-<div><label for="co">Company</label><input id="co" autocomplete="organization"></div>
-<div><label for="e">Email *</label><input id="e" type="email" required autocomplete="email"></div>
-<div><label for="p">Phone / WhatsApp *</label><input id="p" type="tel" required autocomplete="tel"></div>
-<div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" rows="4"></textarea></div>
-<button class="btn p" type="submit">Send enquiry</button>
-</div>
-<div id="st" role="alert"></div>
-</form>
-</div>
-</section>
-
-<section id="contact" class="dark">
-<div class="wrap">
-<p class="mono">Contact</p>
-<h2>TALK TO ASIA FASTNERS.</h2>
-<div class="pr" id="ci"></div>
-</div>
-</section>
 </main>
 
-<footer>
+<footer id="homeFooter">
 <div class="wrap">
 <a class="brand" href="#hero">ASIA <b>FASTNERS</b> PVT LTD</a>
-<ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Industries</a></li><li><a href="#quality">Quality</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="#contact">Contact</a></li><li><a href="#quote">Request a Quote</a></li></ul>
+<ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="industries.html">Industries</a></li><li><a href="quality.html">Quality</a></li><li><a href="#contact">Contact</a></li><li><a href="#quote">Request a Quote</a></li></ul>
 <p class="mono">© <span id="yr"></span> ASIA FASTNERS PVT LTD</p>
 </div>
 </footer>
+
+<!-- Dedicated Contact Page View (Appears on clicking 'Contact' with Nut & Bolt transition) -->
+<div id="contactView" style="display:none;" aria-label="Contact Page">
+  <section id="contact" class="dark">
+    <div class="wrap">
+      <!-- Industrial Showcase Hero Banner -->
+      <div class="contact-hero-banner">
+        <img src="assets/precision-fasteners.jpg" alt="Precision-engineered metallic nuts, bolts and washers" class="contact-banner-img" width="1024" height="576" loading="lazy">
+        
+        <div class="contact-banner-overlay" aria-hidden="true"></div>
+        <svg class="contact-banner-slant" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <filter id="orangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="1.8" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <pattern id="bannerGrid" width="6" height="6" patternUnits="userSpaceOnUse">
+              <path d="M 6 0 L 0 0 0 6" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <polygon points="0,0 52,0 37,100 0,100" fill="url(#bannerGrid)" />
+          <line x1="52" y1="0" x2="37" y2="100" stroke="#EA580C" stroke-width="0.85" opacity="0.95" filter="url(#orangeGlow)"/>
+        </svg>
+
+        <div class="contact-banner-content">
+          <div class="contact-banner-tag">
+            <span class="contact-tag-bar"></span>
+            <span class="mono">CONTACT US</span>
+          </div>
+          <h2 class="contact-banner-title">LET'S BUILD<br>SOMETHING <span class="highlight">SOLID.</span></h2>
+          <p class="contact-banner-desc">Precision fasteners. Reliable partnerships.<br>Engineering confidence into every connection.</p>
+          <div>
+            <a class="btn p contact-banner-btn" href="#quote">Start a Conversation <span class="contact-btn-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="contact-banner-specs" aria-hidden="true">
+          <span>NUTS</span>
+          <span>BOLTS</span>
+          <span>SCREWS</span>
+          <span>WASHERS</span>
+          <span>FLANGE BOLTS</span>
+          <span>SEM SCREWS</span>
+          <span>AND MORE</span>
+        </div>
+      </div>
+
+      <!-- Refined Contact Information Section -->
+      <div class="contact-info-wrap">
+        <div class="contact-grid" id="ci"></div>
+      </div>
+
+      <!-- Minimalist Enquiry CTA Section -->
+      <div class="contact-cta">
+        <div class="contact-cta-left">
+          <p class="mono" style="color:var(--or)">Direct Quotations</p>
+          <h3>SEND US A MESSAGE.</h3>
+          <p>Tell us what you need, and let's find the right fastening solution for your business.</p>
+        </div>
+        <div class="contact-cta-right">
+          <a class="btn p" href="#quote">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="contact-footer">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <a class="brand" href="#hero">ASIA <b>FASTNERS</b> PVT LTD</a>
+      <p class="mono">&copy; <span id="yr2"></span> ASIA FASTNERS PVT LTD &bull; All Rights Reserved</p>
+    </div>
+  </footer>
+</div>
 
 <button class="btn p" id="bk" type="button" aria-label="Open enquiry basket">Enquiry (<span id="cnt">0</span>)</button>
 
@@ -240,199 +254,98 @@ footer a{color:var(--mu);text-decoration:none;font-size:14px}
 <a id="mw" href="#contact" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
+<!-- Quotation Modal Popup (Opens on 'Request a Quote') -->
+<div id="quoteModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="quoteModalClose" type="button" aria-label="Close quotation form">&times;</button>
+    <div class="two">
+      <div>
+        <p class="mono">Quotation</p>
+        <h2 id="quoteModalTitle">REQUEST A QUOTE.</h2>
+        <p style="color:var(--mu);margin-bottom:18px">Add products to your enquiry basket, or specify what you need in the form below. Your enquiry is delivered directly to our team.</p>
+        <div id="sum" style="margin-top:20px"></div>
+        <button class="btn" type="button" id="open2" style="margin-top:16px">Edit enquiry basket &#9662;</button>
+        <div id="modal_basket_editor" class="modal-basket-panel" style="display:none">
+          <div id="modal_basket_items"></div>
+        </div>
+      </div>
+      <div>
+        <form id="f" action="https://formsubmit.co/akshtyagiindia@gmail.com" method="POST" target="hidden_iframe" novalidate>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" id="f_sub" value="New Fastener Quotation Enquiry — Asia Fastners Pvt Ltd">
+          <input type="hidden" name="Selected_Products" id="f_prods" value="">
+          <div style="display:grid;gap:14px">
+            <div><label for="n">Name *</label><input id="n" name="Name" required autocomplete="name"></div>
+            <div><label for="co">Company</label><input id="co" name="Company" autocomplete="organization"></div>
+            <div><label for="e">Email *</label><input id="e" name="Email" type="email" required autocomplete="email"></div>
+            <div><label for="p">Phone / WhatsApp *</label><input id="p" name="Phone_WhatsApp" type="tel" required autocomplete="tel"></div>
+            <div><label for="m">Additional message (standard, specification, material)</label><textarea id="m" name="Message" rows="4"></textarea></div>
+            <button class="btn p" id="f_btn" type="submit">Send enquiry</button>
+          </div>
+          <div id="st" role="alert"></div>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="Submission Handler"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Nut & Bolt Cinematic Page Transition Overlay -->
+<div id="nutBoltOverlay" class="nb-overlay" aria-hidden="true">
+  <div class="nb-vignette"></div>
+  <div class="nb-center">
+    <div class="nb-assembly-graphic">
+      <svg class="nb-svg" viewBox="0 0 160 160" fill="none">
+        <defs>
+          <linearGradient id="nbSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F1F5F9"/>
+            <stop offset="45%" stop-color="#94A3B8"/>
+            <stop offset="100%" stop-color="#334155"/>
+          </linearGradient>
+          <linearGradient id="nbDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#475569"/>
+            <stop offset="100%" stop-color="#0F172A"/>
+          </linearGradient>
+          <filter id="nbGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke="rgba(234,88,12,0.25)" stroke-width="1.2" stroke-dasharray="8 6" class="nb-spin-cw"/>
+        <circle cx="80" cy="80" r="54" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <rect x="68" y="24" width="24" height="106" rx="3" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+        <line x1="68" y1="46" x2="92" y2="52" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="58" x2="92" y2="64" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="70" x2="92" y2="76" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="82" x2="92" y2="88" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="94" x2="92" y2="100" stroke="#0F172A" stroke-width="1.5"/>
+        <line x1="68" y1="106" x2="92" y2="112" stroke="#0F172A" stroke-width="1.5"/>
+        <ellipse cx="80" cy="116" rx="42" ry="12" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+        <g class="nb-fastening-nut">
+          <polygon points="52,66 108,66 100,92 60,92" fill="url(#nbSteel)" stroke="#0F172A" stroke-width="2"/>
+          <ellipse cx="80" cy="79" rx="14" ry="5.5" fill="url(#nbDark)"/>
+        </g>
+        <circle cx="80" cy="106" r="34" stroke="#EA580C" stroke-width="2.5" class="nb-spark-burst" filter="url(#nbGlow)"/>
+      </svg>
+    </div>
+    <div class="nb-status">
+      <span class="mono nb-title" id="nbStatusText">FASTENING CONNECTION...</span>
+      <div class="nb-track"><div class="nb-meter"></div></div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-/* ===== CONFIG: fill these in. Nothing is invented. ===== */
-const CONFIG={
-  email:"",        // enquiry destination, e.g. "sales@yourdomain.com"
-  phone:"",        // e.g. "+91XXXXXXXXXX"
-  whatsapp:"",     // digits only with country code, e.g. "91XXXXXXXXXX"
-  address:"",
-  hours:"",
-  catalogueUrl:""  // link to a hosted catalogue PDF
-};
-const PRODUCTS=[
- {id:"hex-bolts",name:"Hex Bolts",cat:"Bolts",desc:"Hexagon-head bolts for general structural and mechanical joints."},
- {id:"flange-bolts",name:"Flange Bolts",cat:"Bolts",desc:"Bolts with an integrated flange that spreads clamping load without a separate washer."},
- {id:"hex-nuts",name:"Hex Nuts",cat:"Nuts",desc:"Internally threaded hexagon nuts that pair with bolts and studs."},
- {id:"sem-screws",name:"SEM Screws",cat:"Screws",desc:"Screws supplied with a pre-assembled washer for faster assembly."},
- {id:"washers",name:"Washers",cat:"Washers",desc:"Flat washers that distribute load and protect mating surfaces."},
- {id:"screws",name:"Screws",cat:"Screws",desc:"Machine and fastening screws for industrial assembly."}
-];
-const INDUSTRIES={
- "Automotive":["Fastening in vehicle assemblies and components.",["flange-bolts","sem-screws","hex-bolts"]],
- "Construction":["Structural joints and site fixing.",["hex-bolts","hex-nuts","washers"]],
- "Manufacturing":["Production-line assembly and fixtures.",["sem-screws","screws","hex-nuts"]],
- "Engineering":["General engineering assemblies.",["hex-bolts","hex-nuts","washers","screws"]],
- "Infrastructure":["Frameworks, supports and utilities.",["hex-bolts","hex-nuts","washers"]],
- "Fabrication":["Metal fabrication and workshop joining.",["hex-bolts","flange-bolts","washers"]],
- "Machinery":["Machine frames, guards and drives.",["flange-bolts","hex-bolts","screws"]],
- "Electrical":["Enclosures, panels and terminals.",["sem-screws","screws","washers"]],
- "Industrial Maintenance":["Replacement and repair fastening.",["hex-bolts","hex-nuts","washers","screws"]]
-};
-const $=s=>document.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-$("#yr").textContent=new Date().getFullYear();
-
-/* ===== Nav ===== */
-addEventListener("scroll",()=>$("#nav").classList.toggle("s",scrollY>40),{passive:true});
-$("#menu").onclick=()=>{const o=$("#nl").classList.toggle("o");$("#menu").setAttribute("aria-expanded",o)};
-$("#nl").onclick=e=>{if(e.target.tagName==="A"){$("#nl").classList.remove("o")}};
-
-/* ===== Contact (config driven) ===== */
-(function(){
- const waLink=msg=>CONFIG.whatsapp?"https://wa.me/"+CONFIG.whatsapp.replace(/\D/g,"")+"?text="+encodeURIComponent(msg):"";
- window.waLink=waLink;
- const b=(h,v)=>`<div><h3>${h}</h3><p>${v?esc(v):"To be added by the company."}</p></div>`;
- $("#ci").innerHTML=b("ADDRESS",CONFIG.address)+b("PHONE",CONFIG.phone)+b("EMAIL",CONFIG.email)+b("WHATSAPP",CONFIG.whatsapp)+b("BUSINESS HOURS",CONFIG.hours);
- const mc=$("#mc"),mw=$("#mw");
- if(CONFIG.phone)mc.href="tel:"+CONFIG.phone.replace(/[^\d+]/g,""); else mc.style.display="none";
- if(CONFIG.whatsapp)mw.href=waLink("Hello Asia Fastners, I would like to enquire about your products."); else mw.style.display="none";
- $("#cat").innerHTML=CONFIG.catalogueUrl
-  ?`<p style="color:var(--mu);margin-bottom:18px">View or download the current product catalogue.</p><a class="btn p" href="${esc(CONFIG.catalogueUrl)}" target="_blank" rel="noopener">Explore Catalogue</a>`
-  :`<p style="color:var(--mu);margin-bottom:18px">The catalogue PDF is not published yet. Tell us what you need and we will share product information.</p><a class="btn p" href="#quote">Request product information</a>`;
-})();
-
-/* ===== Products ===== */
-let cat="All";
-const cats=["All",...new Set(PRODUCTS.map(p=>p.cat))];
-$("#chips").innerHTML=cats.map(c=>`<button class="chip${c==="All"?" on":""}" data-c="${c}" type="button">${c}</button>`).join("");
-$("#chips").onclick=e=>{const c=e.target.dataset.c;if(!c)return;cat=c;document.querySelectorAll("#chips .chip").forEach(x=>x.classList.toggle("on",x.dataset.c===c));draw()};
-$("#q").oninput=draw;$("#sort").onchange=draw;
-let hl=[];
-function draw(){
- const q=$("#q").value.trim().toLowerCase();
- let l=PRODUCTS.filter(p=>(cat==="All"||p.cat===cat)&&(p.name+p.desc+p.cat).toLowerCase().includes(q));
- l.sort((a,b)=>a.name.localeCompare(b.name)*($("#sort").value==="z"?-1:1));
- $("#grid").innerHTML=l.length?l.map(p=>`<article class="card${hl.includes(p.id)?" hl":""}"><span class="mono">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="row"><button class="btn p" data-add="${p.id}" type="button">Add to Enquiry</button>${CONFIG.whatsapp?`<a class="btn" target="_blank" rel="noopener" href="${waLink("Hello Asia Fastners, I would like to enquire about "+p.name+".")}">WhatsApp</a>`:""}</div></article>`).join(""):`<div class="card"><h3>No match</h3><p>Nothing matches your search. Request a quote and tell us what you need.</p></div>`;
-}
-$("#grid").onclick=e=>{const id=e.target.dataset.add;if(id){add(id);e.target.textContent="Added ✓";setTimeout(()=>e.target.textContent="Add to Enquiry",1200)}};
-draw();
-
-/* ===== Industries ===== */
-$("#ind").innerHTML=Object.keys(INDUSTRIES).map(k=>`<button class="chip" data-k="${k}" type="button">${k}</button>`).join("");
-$("#ind").onclick=e=>{const k=e.target.dataset.k;if(!k)return;document.querySelectorAll("#ind .chip").forEach(x=>x.classList.toggle("on",x.dataset.k===k));hl=INDUSTRIES[k][1];$("#indtx").textContent=INDUSTRIES[k][0]+" Related fastener families are highlighted in the catalogue.";draw()};
-
-/* ===== Basket ===== */
-let basket=[];
-try{basket=JSON.parse(localStorage.getItem("af_basket")||"[]")}catch(e){}
-function save(){try{localStorage.setItem("af_basket",JSON.stringify(basket))}catch(e){}renderB()}
-function add(id){const p=PRODUCTS.find(x=>x.id===id);const i=basket.find(x=>x.id===id);if(i)i.qty++;else basket.push({id,name:p.name,qty:100,size:"",grade:""});save()}
-function renderB(){
- $("#cnt").textContent=basket.length;
- $("#bk").style.display=basket.length?"block":"none";
- $("#items").innerHTML=basket.length?basket.map((b,i)=>`<div class="it"><div style="display:flex;justify-content:space-between"><strong>${esc(b.name)}</strong><button class="chip" data-rm="${i}" type="button" aria-label="Remove ${esc(b.name)}">Remove</button></div><div class="r"><div><label for="q${i}">Qty (pcs)</label><input id="q${i}" type="number" min="1" value="${b.qty}" data-i="${i}" data-k="qty"></div><div><label for="s${i}">Size</label><input id="s${i}" value="${esc(b.size)}" data-i="${i}" data-k="size"></div><div><label for="g${i}">Material / grade</label><input id="g${i}" value="${esc(b.grade)}" data-i="${i}" data-k="grade"></div></div></div>`).join(""):`<p style="color:var(--mu);margin-top:16px">Your basket is empty. Add products from the catalogue.</p>`;
- $("#sum").innerHTML=basket.length?basket.map(b=>`<p class="mono" style="color:var(--tx)">${esc(b.name)} — ${b.qty} pcs${b.size?" — "+esc(b.size):""}${b.grade?" — "+esc(b.grade):""}</p>`).join(""):`<p class="mono">No products added yet</p>`;
-}
-$("#items").addEventListener("input",e=>{const t=e.target,i=t.dataset.i;if(i===undefined)return;basket[i][t.dataset.k]=t.dataset.k==="qty"?Math.max(1,parseInt(t.value)||1):t.value;try{localStorage.setItem("af_basket",JSON.stringify(basket))}catch(x){}$("#sum").innerHTML=basket.map(b=>`<p class="mono" style="color:var(--tx)">${esc(b.name)} — ${b.qty} pcs${b.size?" — "+esc(b.size):""}${b.grade?" — "+esc(b.grade):""}</p>`).join("")});
-$("#items").addEventListener("click",e=>{const r=e.target.dataset.rm;if(r!==undefined){basket.splice(+r,1);save()}});
-const dr=$("#drawer"),oD=o=>{dr.classList.toggle("open",o);dr.setAttribute("aria-hidden",!o)};
-$("#bk").onclick=()=>oD(true);$("#open2").onclick=()=>oD(true);$("#cl").onclick=()=>oD(false);$("#gq").onclick=()=>oD(false);
-addEventListener("keydown",e=>{if(e.key==="Escape")oD(false)});
-renderB();
-
-/* ===== Quote form (no backend: opens the user's email app; never fakes success) ===== */
-$("#f").onsubmit=e=>{
- e.preventDefault();
- const st=$("#st");st.style.display="block";
- const v=id=>$("#"+id).value.trim();
- if(!v("n")||!/^\S+@\S+\.\S+$/.test(v("e"))||v("p").replace(/\D/g,"").length<7){st.textContent="Please enter your name, a valid email and a phone/WhatsApp number.";return}
- if(!basket.length){st.textContent="Your enquiry basket is empty. Add at least one product first.";return}
- if(!CONFIG.email){st.textContent="Enquiry email is not configured yet. The site owner must set CONFIG.email, or use the Call / WhatsApp options.";return}
- const body=["Name: "+v("n"),"Company: "+v("co"),"Email: "+v("e"),"Phone: "+v("p"),"","Products:",...basket.map(b=>"- "+b.name+" | "+b.qty+" pcs | size: "+(b.size||"-")+" | grade: "+(b.grade||"-")),"","Message: "+v("m")].join("\n");
- location.href="mailto:"+encodeURIComponent(CONFIG.email)+"?subject="+encodeURIComponent("Quotation enquiry — ASIA FASTNERS")+"&body="+encodeURIComponent(body);
- st.textContent="Your email app has opened with the enquiry prefilled. Press send there to submit it.";
-};
-
-/* ===== 3D ===== */
-(function(){
- const cv=$("#c");let R;
- try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){}
- if(!R||typeof THREE==="undefined"){document.body.classList.add("no3d");$("#hero").classList.add("show");return}
- const mobile=innerWidth<820;
- R.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));
- const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.1,100);
- sc.add(new THREE.HemisphereLight(0xcfd8e6,0x15191f,.9));
- const key=new THREE.DirectionalLight(0xffffff,1.6);key.position.set(5,6,6);sc.add(key);
- const rim=new THREE.DirectionalLight(0x2457A7,2.2);rim.position.set(-6,2,-5);sc.add(rim);
- const spot=new THREE.PointLight(0xF47735,.8,20);spot.position.set(-3,-2,4);sc.add(spot);
- const mat=new THREE.MeshStandardMaterial({color:0xb4bcc8,metalness:.85,roughness:.32});
- const dark=new THREE.MeshStandardMaterial({color:0x8d96a3,metalness:.9,roughness:.4});
- const G=new THREE.Group();sc.add(G);
- const P=.25; // thread pitch
- // bolt (axis = Y)
- const bolt=new THREE.Group();
- const head=new THREE.Mesh(new THREE.CylinderGeometry(1,1,.6,6),mat);head.position.y=-1.55;bolt.add(head);
- const fl=new THREE.Mesh(new THREE.CylinderGeometry(1.4,1.2,.14,48),mat);fl.position.y=-1.2;bolt.add(fl);
- const sh=new THREE.Mesh(new THREE.CylinderGeometry(.5,.5,3.2,40),dark);sh.position.y=.43;bolt.add(sh);
- class Helix extends THREE.Curve{getPoint(t,o=new THREE.Vector3()){const a=t*((3.1-.0)/P)*Math.PI*2;return o.set(.5*Math.cos(a),-1.1+t*3.1,.5*Math.sin(a))}}
- const th=new THREE.Mesh(new THREE.TubeGeometry(new Helix(),mobile?260:480,.055,6,false),mat);bolt.add(th);
- G.add(bolt);
- // nut
- const hexShape=r=>{const s=new THREE.Shape();for(let i=0;i<6;i++){const a=i*Math.PI/3;i?s.lineTo(r*Math.cos(a),r*Math.sin(a)):s.moveTo(r*Math.cos(a),r*Math.sin(a))}return s};
- const ring=(s,r)=>{const h=new THREE.Path();h.absarc(0,0,r,0,Math.PI*2,true);s.holes.push(h);return s};
- const ng=new THREE.ExtrudeGeometry(ring(hexShape(.95),.53),{depth:.8,bevelEnabled:false});ng.translate(0,0,-.4);ng.rotateX(-Math.PI/2);
- const nut=new THREE.Mesh(ng,mat);G.add(nut);
- // washer
- const ws=new THREE.Shape();ws.absarc(0,0,1.15,0,Math.PI*2,false);
- const wg=new THREE.ExtrudeGeometry(ring(ws,.55),{depth:.12,bevelEnabled:false,curveSegments:48});wg.translate(0,0,-.06);wg.rotateX(-Math.PI/2);
- const wash=new THREE.Mesh(wg,mat);G.add(wash);
- G.rotation.z=.35;
-
- const WY=-1.05,NY=-.59;
- let eW=1,eN=1,tW=1,tN=1,az=0,dist=15,tD=15,hgt=1,tH=1,tAz=0,mx=0,my=0,userAz=0,drag=false,lx=0,tL=null,auto=true,intro=!RM,t0=performance.now(),spin=0;
- const sm=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
- function pose(){wash.position.y=WY+eW*2.4;nut.position.y=NY+eN*4.6;nut.rotation.y=-eN*4.6/P*Math.PI*2}
- const heroEl=$("#hero");
- function endIntro(){intro=false;heroEl.classList.add("show");tD=9.5}
- if(RM){eW=eN=0;tW=tN=0;dist=tD=9.5;heroEl.classList.add("show")}
- $("#skip").onclick=()=>{endIntro();tW=tN=0;$("#skip").style.display="none"};
- if(RM)$("#skip").style.display="none";
- const story=$("#story"),chs=[...document.querySelectorAll(".ch")],pg=$("#pg"),lab=$("#lab");
- let labOn=false;
- new IntersectionObserver(e=>{labOn=e[0].isIntersecting},{threshold:.35}).observe(lab);
- $("#lx").onclick=()=>{tL=1};$("#la").onclick=()=>{tL=0};
- $("#lr").onclick=function(){auto=!auto;this.textContent="Auto-rotate: "+(auto?"on":"off");this.setAttribute("aria-pressed",auto)};
- $("#lz").onclick=()=>{tL=0;userAz=0;auto=true;$("#lr").textContent="Auto-rotate: on";$("#lr").setAttribute("aria-pressed","true")};
- lab.addEventListener("pointerdown",e=>{if(e.target.closest("button"))return;drag=true;lx=e.clientX});
- addEventListener("pointerup",()=>drag=false);
- addEventListener("pointermove",e=>{if(drag){userAz+=(e.clientX-lx)*.01;lx=e.clientX}if(e.pointerType==="mouse"){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5}});
- function size(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
- addEventListener("resize",size);size();
- function frame(){
-  requestAnimationFrame(frame);
-  const now=performance.now(),t=(now-t0)/1000;
-  const sr=story.getBoundingClientRect(),sp=Math.max(0,Math.min(1,-sr.top/(sr.height-innerHeight)));
-  const inStory=sr.top<innerHeight&&sr.bottom>0;
-  let op=1;
-  if(intro&&scrollY<50){
-   tW=1-sm((t-1)/2.2);tN=1-sm((t-3)/3.2);tD=15-5.5*sm(t/6);tAz=t*.25;
-   if(t>5.8)endIntro();
-  }else if(intro){endIntro();tW=tN=0}
-  if(!intro){
-   if(inStory){
-    tW=1-sm((sp-.2)/.2);tN=1-sm((sp-.5)/.3);
-    tD=sp<.35?9.5:sp<.75?5.2:12;tH=sp<.75?.6:2;tAz=sp*Math.PI*1.6;
-    const ci=Math.min(4,Math.floor(sp*5));chs.forEach((c,i)=>c.classList.toggle("on",i===ci));pg.style.width=sp*100+"%";
-   }else if(labOn){
-    if(tL!==null){tW=tN=tL}tD=10;tH=1;if(auto)tAz+=.006;
-   }else{
-    tW=tN=0;tD=sr.bottom<0?11:9.5;tAz+=.002;
-    if(sr.bottom<0){op=Math.max(.15,1-(-sr.bottom)/(innerHeight*1.5))}
-   }
-  }
-  if(!inStory)chs.forEach(c=>c.classList.remove("on"));
-  const k=.07;eW+=(tW-eW)*k;eN+=(tN-eN)*k;dist+=(tD-dist)*.05;hgt+=(tH-hgt)*.05;az+=(tAz-az)*.06;
-  pose();
-  G.rotation.y=az+userAz+(RM?0:mx*.5);G.rotation.x=RM?0:my*.25;
-  cam.position.set(0,hgt+1,dist);cam.lookAt(0,.4,0);
-  key.position.x=5+mx*4;
-  cv.style.opacity=op;
-  R.render(sc,cam);
- }
- frame();
-})();
-</script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/transition.js"></script>
+<script src="js/quote-modal.js"></script>
+<script src="js/products.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/three-scene.js"></script>
 </body>
 </html>

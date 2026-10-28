@@ -1,0 +1,11 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Dependencies & Environments
+node_modules/
+.env
+
+# Backups & Logs
+_backup_pre_refactor/
+*.log
