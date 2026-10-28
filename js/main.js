@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
       }
     });
+
+    document.addEventListener("click", (e) => {
+      if (navList.classList.contains("o") && !nav.contains(e.target)) {
+        navList.classList.remove("o");
+        if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   // Initialize Scroll Spy for dynamic active navigation indicator (orange bar)

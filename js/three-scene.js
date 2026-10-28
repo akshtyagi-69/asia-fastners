@@ -188,9 +188,11 @@
     const aspect = w / h;
     cam.aspect = aspect;
     if (aspect < 1) {
-      const hFov = 35 * Math.PI / 180;
-      const vFov = 2 * Math.atan(Math.tan(hFov / 2) / (aspect * 1.28)) * (180 / Math.PI);
-      cam.fov = Math.min(54, Math.max(35, vFov));
+      // For portrait mobile / tablet screens, adjust vertical FOV so the fastener
+      // fits completely inside horizontal margins without any side cropping.
+      const targetHFov = (w < 400 ? 32 : 35) * Math.PI / 180;
+      const vFov = 2 * Math.atan(Math.tan(targetHFov / 2) / aspect) * (180 / Math.PI);
+      cam.fov = Math.min(64, Math.max(35, vFov));
     } else {
       cam.fov = 35;
     }
@@ -226,24 +228,34 @@
       tW = tN = 0;
     }
 
+    const isMob = window.innerWidth < 820;
+    const isNarrow = window.innerWidth < 480;
+
     if (!intro) {
       if (inStory) {
         tW = 1 - sm((sp - .2) / .2);
         tN = 1 - sm((sp - .5) / .3);
-        tD = sp < .35 ? 9.5 : sp < .75 ? 5.2 : 12;
-        tH = sp < .75 ? .6 : 2;
+        if (!isMob) {
+          // Desktop: Original reference composition
+          tD = sp < .35 ? 9.5 : sp < .75 ? 5.2 : 12;
+          tH = sp < .75 ? .6 : 2;
+        } else {
+          // Mobile & Tablet: Maintain full visibility of central nut without side clipping
+          tD = sp < .35 ? (isNarrow ? 10.8 : 10.0) : sp < .75 ? (isNarrow ? 7.4 : 6.6) : (isNarrow ? 14.0 : 13.0);
+          tH = sp < .75 ? .8 : 2.2;
+        }
         tAz = sp * Math.PI * 1.6;
         const ci = Math.min(4, Math.floor(sp * 5));
         chs.forEach((c, i) => c.classList.toggle("on", i === ci));
         if (pg) pg.style.width = sp * 100 + "%";
       } else if (labOn) {
         if (tL !== null) { tW = tN = tL; }
-        tD = 10;
-        tH = 1;
+        tD = isMob ? (isNarrow ? 12.0 : 11.0) : 10;
+        tH = isMob ? 1.4 : 1;
         if (auto) tAz += .006;
       } else {
         tW = tN = 0;
-        tD = (sr && sr.bottom < 0) ? 11 : 9.5;
+        tD = (sr && sr.bottom < 0) ? (isMob ? 13 : 11) : (isMob ? (isNarrow ? 11.2 : 10.2) : 9.5);
         tAz += .002;
         if (sr && sr.bottom < 0) {
           op = Math.max(.15, 1 - (-sr.bottom) / (window.innerHeight * 1.5));
@@ -262,15 +274,22 @@
 
     pose();
 
-    const isMob = window.innerWidth < 820;
     let targetGx = 0;
     let targetY = 0.4;
 
     if (!isMob) {
+      // Desktop: Fastener positioned to left of hero text, centered horizontally in story & lab
       if (!inStory && !labOn && sr && sr.top >= 0) targetGx = -1.45;
     } else {
-      if (!inStory && !labOn && sr && sr.top >= 0) targetY = -0.32;
-      else if (inStory) targetY = 0.18;
+      // Mobile: Elevated vertical framing so central 3D nut stays fully in upper half of viewport,
+      // completely clear of hero cards, chapter text cards, and lab buttons below it.
+      if (!inStory && !labOn && sr && sr.top >= 0) {
+        targetY = isNarrow ? -0.42 : -0.34;
+      } else if (inStory) {
+        targetY = isNarrow ? -0.56 : -0.48;
+      } else if (labOn) {
+        targetY = isNarrow ? -0.42 : -0.32;
+      }
     }
 
     G.position.x += (targetGx - G.position.x) * .06;

@@ -737,6 +737,17 @@
   .q-hero-img {
     height: 260px;
   }
+  .q-hero-media-badge {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 12px;
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
   .q-std-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -755,6 +766,16 @@
 @media (max-width: 380px) {
   .q-hero-title {
     font-size: 24px;
+  }
+  .q-hero-media-badge {
+    margin: 8px;
+    padding: 8px 10px;
+  }
+  .q-badge-text {
+    font-size: 10.5px;
+  }
+  .q-badge-sub {
+    font-size: 10px;
   }
   .q-cert-card {
     padding: 16px 12px;

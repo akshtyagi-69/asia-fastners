@@ -598,8 +598,9 @@
   .ind-hero-title {
     font-size: clamp(26px, 6.5vw, 40px);
   }
-  .showcase-banner-title {
-    font-size: clamp(24px, 6vw, 36px);
+  .showcase-banner-title,
+  .showcase-title {
+    font-size: clamp(22px, 5.8vw, 32px);
   }
   .ind-tab-btn {
     padding: 8px 14px;
@@ -615,6 +616,29 @@
 }
 
 @media(max-width: 480px) {
+  .ind-hero-banner-content {
+    padding: 24px 16px 32px;
+  }
+  .showcase-banner-content {
+    padding: 20px 16px 28px;
+  }
+  .showcase-banner-specs {
+    padding: 0 16px 20px;
+  }
+  .spec-live-pill {
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .spec-note {
+    font-size: 10px;
+    overflow-wrap: break-word;
+  }
+  .showcase-app-item {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
   .ind-hero-actions {
     flex-direction: column;
     width: 100%;
@@ -622,5 +646,27 @@
   .ind-hero-actions .btn {
     width: 100%;
     text-align: center;
+  }
+  .showcase-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 360px) {
+  .ind-hero-title {
+    font-size: clamp(22px, 6.8vw, 28px);
+  }
+  .showcase-title {
+    font-size: 20px;
+  }
+  .ind-tab-btn {
+    padding: 7px 11px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  .ind-tab-btn svg {
+    width: 15px;
+    height: 15px;
   }
 }
