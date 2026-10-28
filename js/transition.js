@@ -49,7 +49,7 @@
                       window.location.pathname.endsWith("contact.html");
 
     if (isSubPage) {
-      document.querySelectorAll('a[href^="asia-fastners.html"], a[href^="index.html"], a[href="industries.html"], a[href="quality.html"], a[href="contact.html"]').forEach(a => {
+      document.querySelectorAll('a[href^="index.html"], a[href="industries.html"], a[href="quality.html"], a[href="contact.html"]').forEach(a => {
         a.addEventListener("click", e => {
           const href = a.getAttribute("href");
           if (!href || href.startsWith("#")) return;

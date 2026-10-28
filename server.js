@@ -20,6 +20,11 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqPath = req.url.split('?')[0];
+  if (reqPath === '/asia-fastners.html') {
+    res.writeHead(301, { 'Location': '/' });
+    res.end();
+    return;
+  }
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   const filePath = path.join(__dirname, decodeURIComponent(reqPath));
 
