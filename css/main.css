@@ -288,30 +288,39 @@ label {
   bottom: 0;
   z-index: 30;
   display: flex;
-  background: rgba(255, 255, 255, .96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid var(--ln);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, .05);
+  background: var(--or);
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, .16);
   padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .mob a, .mob button {
   flex: 1;
-  padding: 16px 6px;
+  width: 100%;
+  padding: 15px 20px;
   text-align: center;
-  font: 600 12px ui-monospace, Menlo, monospace;
-  letter-spacing: .12em;
+  font: 700 13px/1.2 ui-monospace, Menlo, monospace;
+  letter-spacing: .14em;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--tx);
-  background: none;
+  color: #FFFFFF;
+  background: var(--or);
   border: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background .2s ease, filter .2s ease;
 }
 
 .mob .q {
   background: var(--or);
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.mob a:hover, .mob button:hover, .mob .q:hover {
+  background: #c2410c;
   color: #FFFFFF;
 }
 

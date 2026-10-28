@@ -42,14 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
     card("EMAIL", "Email", CONFIG.email, CONFIG.email ? "mailto:" + CONFIG.email : "") +
     card("WHATSAPP", "WhatsApp", CONFIG.whatsapp, CONFIG.whatsapp ? waLink("Hello Asia Fastners, I would like to get in touch.") : "") +
     card("BUSINESS HOURS", "Business Hours", CONFIG.hours, "");
-
-  const mc = $("#mc"), mw = $("#mw");
-  if (mc) {
-    if (CONFIG.phone) mc.href = "tel:" + CONFIG.phone.replace(/[^\d+]/g, "");
-    else mc.style.display = "none";
-  }
-  if (mw) {
-    if (CONFIG.whatsapp) mw.href = waLink("Hello Asia Fastners, I would like to enquire about your products.");
-    else mw.style.display = "none";
-  }
 });
