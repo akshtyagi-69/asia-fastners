@@ -717,10 +717,10 @@
 
 @media (max-width: 640px) {
   .q-section {
-    padding: 70px 0;
+    padding: 60px 0;
   }
   .q-hero {
-    padding: 100px 0 60px;
+    padding: 90px 0 50px;
   }
   .q-spec-grid,
   .q-standards-grid,
@@ -728,8 +728,14 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .q-cert-card {
+    padding: 20px 16px;
+  }
+  .q-std-card {
+    padding: 22px 18px;
+  }
   .q-hero-img {
-    height: 280px;
+    height: 260px;
   }
   .q-std-footer {
     flex-direction: column;
@@ -743,6 +749,23 @@
   .q-cta-btn-ghost {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .q-hero-title {
+    font-size: 24px;
+  }
+  .q-cert-card {
+    padding: 16px 12px;
+  }
+  .q-cert-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .q-cta-actions .btn {
+    padding: 12px 14px;
+    font-size: 11px;
   }
 }
 

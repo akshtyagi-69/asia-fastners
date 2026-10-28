@@ -15,7 +15,7 @@
   --sh: 0 10px 25px -5px rgba(0, 0, 0, .05), 0 8px 10px -6px rgba(0, 0, 0, .02);
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -23,6 +23,10 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -31,9 +35,22 @@ body {
   font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background-image: linear-gradient(var(--ln) 1px, transparent 1px), linear-gradient(90deg, var(--ln) 1px, transparent 1px);
   background-size: 64px 64px;
-  padding-bottom: 64px;
-  overflow-x: clip;
+  padding-bottom: 74px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+table, pre, code {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .mono {
@@ -44,10 +61,12 @@ body {
   color: var(--mu);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.05;
   letter-spacing: -.02em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-word;
 }
 
@@ -449,19 +468,22 @@ footer a:hover {
 }
 
 /* ===== Mobile Navigation Overrides ===== */
-@media(max-width: 820px) {
+@media(max-width: 980px) {
   nav ul {
     display: none;
     position: absolute;
     top: 64px;
     left: 0;
     right: 0;
+    width: 100%;
+    max-width: 100%;
     flex-direction: column;
-    background: var(--bg2);
-    padding: 20px 22px;
+    background: #FFFFFF;
+    padding: 22px 20px;
     border-bottom: 1px solid var(--ln);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, .08);
-    gap: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .1);
+    gap: 16px;
+    z-index: 45;
   }
   nav ul.o {
     display: flex;
@@ -475,12 +497,31 @@ footer a:hover {
   .wrap {
     padding: 0 16px;
   }
+}
+
+@media(max-width: 640px) {
+  .modal-backdrop {
+    padding: 10px 8px;
+    align-items: flex-end;
+  }
   .modal-box {
-    padding: 32px 18px 24px;
+    padding: 30px 16px 20px;
+    max-height: 90vh;
+    max-height: 90dvh;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .modal-box .two {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
   }
 }
 
@@ -504,7 +545,9 @@ footer a:hover {
 .breadcrumb-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  row-gap: 6px;
+  column-gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0;

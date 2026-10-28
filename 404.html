@@ -129,9 +129,12 @@
   transform: translateY(-2px);
 }
 @media (max-width: 640px) {
-  .notfound-card { padding: 32px 20px; }
+  .notfound-card { padding: 32px 18px; }
   .notfound-grid { grid-template-columns: 1fr 1fr; }
   .notfound-actions .btn { width: 100%; text-align: center; }
+}
+@media (max-width: 400px) {
+  .notfound-grid { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -209,6 +212,11 @@
     </div>
   </div>
 </main>
+
+<!-- Sticky Bottom Action Bar -->
+<div class="mob" id="mob">
+  <a class="q" href="#quote" aria-label="Request an Industrial Fastener Quotation">Request a Quote</a>
+</div>
 
 <!-- Quotation Modal Dialog -->
 <div id="quoteModal" class="quote-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">

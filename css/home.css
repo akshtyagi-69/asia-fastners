@@ -88,6 +88,8 @@ section {
   height: 560vh;
   padding: 0;
   position: relative;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .stick {
@@ -99,6 +101,8 @@ section {
   align-items: center;
   z-index: 10;
   pointer-events: none;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .stick .wrap {
@@ -209,6 +213,16 @@ section {
   gap: 6px;
 }
 
+.tools-search {
+  flex: 2 1 240px;
+  min-width: 0;
+}
+
+.tools-sort {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
 .tools label {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 11px;
@@ -283,6 +297,9 @@ section {
   background: #FFFFFF;
   border: 1px solid var(--ln);
   border-radius: 12px;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -859,9 +876,26 @@ section {
 }
 
 @media(max-width: 640px) {
+  .tools {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .tools-search,
+  .tools-sort {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+  .tools input,
+  .tools select {
+    width: 100%;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: 18px;
+    width: 100%;
+    min-width: 0;
   }
   .p-card-media {
     height: 195px;
@@ -1164,5 +1198,33 @@ section {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+}
+
+
+/* Extra small devices (iPhone SE, Galaxy S compact, small Androids <= 380px) */
+@media(max-width: 380px) {
+  .p-card-body {
+    padding: 16px 14px;
+  }
+  .p-card-title {
+    font-size: 19px;
+  }
+  .p-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .p-wa-btn {
+    width: 100%;
+    height: 40px;
+  }
+  .about-heading {
+    font-size: clamp(22px, 6.5vw, 36px);
+  }
+  .about-highlights {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 }
